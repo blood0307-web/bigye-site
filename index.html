@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>비계PRO | 대한민국 비계인을 하나로</title>
+<meta name="description" content="비계PRO 전국 인력네트워크 - 반도체·플랜트·시스템비계·유도원·신호수 구인구직과 현장정보를 연결합니다.">
+<style>
+:root{
+  --black:#090a0c;--panel:#14161a;--panel2:#1d2025;
+  --gold:#e0ad32;--gold2:#ffd66b;--white:#f7f7f5;
+  --muted:#a8abb1;--line:#30343b;--cream:#f5f1e8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Pretendard,"Noto Sans KR",Arial,sans-serif;background:var(--black);color:var(--white)}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(9,10,12,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:22px}
+.mark{width:42px;height:42px;border:2px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-weight:1000}
+.brand b{color:var(--gold)}
+.menu{display:flex;gap:26px;color:#d7d7d7;font-size:14px}
+.navbtn{padding:11px 16px;background:var(--gold);color:#111;border-radius:10px;font-weight:900}
+.hero{min-height:690px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:580px;height:580px;border:1px solid rgba(224,173,50,.17);border-radius:50%;right:-100px;top:40px;box-shadow:0 0 100px rgba(224,173,50,.08)}
+.hero:after{content:"";position:absolute;width:360px;height:360px;background:radial-gradient(circle,rgba(224,173,50,.12),transparent 67%);right:90px;top:150px}
+.heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center;position:relative;z-index:2}
+.kicker{color:var(--gold);font-size:14px;font-weight:900;letter-spacing:.16em;margin-bottom:18px}
+h1{font-size:clamp(44px,6vw,78px);line-height:1.08;margin:0 0 24px;letter-spacing:-.055em}
+h1 em{font-style:normal;color:var(--gold)}
+.lead{font-size:20px;line-height:1.75;color:#c6c8cc;max-width:680px;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin:26px 0 34px}
+.chip{border:1px solid var(--line);background:#111318;padding:9px 13px;border-radius:999px;color:#ddd;font-size:13px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:15px 22px;border-radius:12px;font-weight:900;border:1px solid var(--line)}
+.btn.primary{background:var(--gold);color:#111;border-color:var(--gold)}
+.btn.ghost{background:#15171b}
+.heroCard{background:linear-gradient(145deg,#1c1f24,#101215);border:1px solid #333841;border-radius:28px;padding:28px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.heroLogo{border:1px solid rgba(224,173,50,.4);border-radius:22px;padding:34px 24px;text-align:center;background:#0d0f12}
+.heroLogo .symbol{font-size:54px;color:var(--gold);font-weight:1000}
+.heroLogo .word{font-size:36px;font-weight:1000;letter-spacing:-.05em;margin-top:8px}.heroLogo .word span{color:var(--gold)}
+.statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.stat{background:#101216;border:1px solid #2b2f36;border-radius:16px;padding:15px;text-align:center}
+.stat strong{display:block;color:var(--gold2);font-size:18px}.stat small{color:var(--muted)}
+section{padding:96px 0}
+.light{background:var(--cream);color:#151515}
+.eyebrow{color:#a9780e;font-weight:900;font-size:13px;letter-spacing:.12em}
+h2{font-size:clamp(34px,4vw,52px);letter-spacing:-.045em;margin:10px 0 14px}
+.desc{color:#666;line-height:1.75;font-size:17px;max-width:760px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.card{background:#fff;border:1px solid #e5dfd2;border-radius:22px;padding:26px;min-height:210px;box-shadow:0 14px 35px rgba(40,30,10,.05)}
+.icon{font-size:30px}.card h3{font-size:22px;margin:16px 0 10px}.card p{color:#6b6b6b;line-height:1.7;margin:0}
+.network{background:#0c0e11}
+.networkGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.quote{font-size:30px;line-height:1.5;font-weight:900;letter-spacing:-.035em}
+.quote span{color:var(--gold)}
+.network p{color:#b4b7bd;line-height:1.8}
+.flow{display:grid;gap:12px}
+.flowItem{display:flex;align-items:center;gap:18px;background:#15181d;border:1px solid #30343c;border-radius:18px;padding:20px}
+.num{width:44px;height:44px;flex:0 0 44px;border-radius:12px;background:var(--gold);color:#111;display:grid;place-items:center;font-weight:1000}
+.flowItem b{display:block;font-size:18px;margin-bottom:4px}.flowItem small{color:var(--muted)}
+.jobs{background:#f7f7f5;color:#151515}
+.jobbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.jobbar span{padding:10px 14px;border-radius:10px;background:#fff;border:1px solid #ddd8cc;font-weight:700}
+.cta{padding:70px 0;background:linear-gradient(135deg,#dca72b,#f3cb62);color:#111}
+.ctabox{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.ctabox h2{margin:0;font-size:38px}.ctabox p{margin:10px 0 0;color:#4d3a0a}
+.darkbtn{background:#111;color:#fff;padding:16px 22px;border-radius:12px;font-weight:900;white-space:nowrap}
+.memberBox{margin-top:38px;background:#fff;border:1px solid #e5dfd2;border-radius:22px;padding:26px;box-shadow:0 14px 35px rgba(40,30,10,.05)}
+.memberTop{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.memberTop h3{font-size:25px;margin:0 0 7px}.memberTop p{margin:0;color:#666;line-height:1.6}
+.memberActions{display:flex;gap:10px;flex-wrap:wrap}.memberBtn{border:0;border-radius:11px;padding:13px 18px;font-weight:900;cursor:pointer;font-size:15px}
+.memberBtn.gold{background:var(--gold);color:#111}.memberBtn.dark{background:#111;color:#fff}.memberBtn.gray{background:#e8e5df;color:#333}
+.memberStatus{display:none;margin-top:20px;padding:17px;border-radius:14px;background:#f5f1e8;color:#333}.memberStatus.show{display:block}
+.downloadBtn{display:inline-block;margin-top:12px;background:#111;color:#fff;border-radius:11px;padding:14px 20px;font-weight:900}
+.modalBack{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.72);align-items:center;justify-content:center;padding:18px}.modalBack.open{display:flex}
+.authModal{width:min(440px,100%);background:#fff;color:#151515;border-radius:23px;padding:28px;position:relative}.authModal h3{font-size:27px;margin:0 0 6px}.authModal>p{color:#666;margin:0 0 20px}
+.closeBtn{position:absolute;right:18px;top:15px;border:0;background:transparent;font-size:27px;cursor:pointer}.authInput{width:100%;border:1px solid #d7d2c7;border-radius:10px;padding:14px;margin:6px 0;font-size:16px}
+.authMain{width:100%;margin-top:10px;border:0;border-radius:11px;padding:14px;background:var(--gold);font-size:16px;font-weight:900;cursor:pointer}.authDivider{text-align:center;color:#999;margin:17px 0;font-size:13px}
+.socialBtn{width:100%;border:1px solid #ddd;border-radius:11px;padding:13px;margin:5px 0;background:#fff;font-size:15px;font-weight:800;cursor:pointer}.socialBtn.kakao{background:#fee500;border-color:#fee500;color:#191919}
+.authMsg{min-height:22px;margin-top:10px!important;color:#b02a22!important;font-size:14px}.authSwitch{text-align:center;margin-top:13px;color:#555;font-size:14px}.authSwitch button{border:0;background:none;color:#9b6b00;font-weight:900;cursor:pointer}
+footer{padding:38px 0;color:#8f9298;border-top:1px solid #24272d}
+.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}
+@media(max-width:820px){
+ .menu{display:none}.hero{min-height:auto;padding:80px 0}.heroGrid,.networkGrid{grid-template-columns:1fr}
+ .heroCard{margin-top:10px}.cards{grid-template-columns:1fr}.ctabox,.foot{align-items:flex-start;flex-direction:column}
+ section{padding:70px 0}.statrow{grid-template-columns:1fr 1fr 1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap nav">
+    <a class="brand" href="#"><div class="mark">B</div><div>비계<span style="color:#e0ad32">PRO</span></div></a>
+    <div class="menu"><a href="#network">인력네트워크</a><a href="#jobs">구인·구직</a><a href="#app">비계PRO 앱</a><a href="#band">BAND</a></div>
+    <a class="navbtn" href="#jobs">현장 연결하기</a>
+  </div>
+</nav>
+
+<header class="hero">
+ <div class="wrap heroGrid">
+  <div>
+   <div class="kicker">BIGYE PRO · NATIONAL WORKFORCE NETWORK</div>
+   <h1>대한민국 비계인을<br><em>하나로 연결하다.</em></h1>
+   <p class="lead">전국의 현장과 사람을 연결하고, 비계인의 기술과 안전, 일자리와 경험을 함께 나누는 전문 인력 플랫폼.</p>
+   <div class="chips"><span class="chip">시스템비계</span><span class="chip">반도체</span><span class="chip">플랜트</span><span class="chip">유도원</span><span class="chip">신호수</span><span class="chip">화기감시</span></div>
+   <div class="actions"><a class="btn primary" href="#jobs">구인·구직 보기</a><a class="btn ghost" href="#app">비계PRO 앱</a></div>
+  </div>
+  <div class="heroCard">
+   <div class="heroLogo"><div class="symbol">★</div><div class="word">비계<span>PRO</span></div><div style="color:#aaa;margin-top:7px">전국 인력네트워크</div></div>
+   <div class="statrow"><div class="stat"><strong>현장</strong><small>전국 연결</small></div><div class="stat"><strong>인력</strong><small>빠른 매칭</small></div><div class="stat"><strong>기술</strong><small>경험 공유</small></div></div>
+  </div>
+ </div>
+</header>
+
+<section class="light" id="app">
+ <div class="wrap">
+  <div class="eyebrow">BIGYE PRO PLATFORM</div>
+  <h2>현장에 필요한 것을<br>한곳에서.</h2>
+  <p class="desc">복잡한 현장 업무를 더 단순하게. 출근과 공수, 급여, 작업일지, 구인·구직과 현장정보를 비계PRO 하나로 연결합니다.</p>
+  <div class="cards">
+   <div class="card"><div class="icon">▣</div><h3>공수·근태 관리</h3><p>출근, 연장, 야간과 공수를 빠르게 기록하고 월별 내역을 한눈에 확인합니다.</p></div>
+   <div class="card"><div class="icon">₩</div><h3>급여 자동 계산</h3><p>일당과 공수 기준으로 급여를 정리해 팀원과 관리자의 반복 계산을 줄입니다.</p></div>
+   <div class="card"><div class="icon">◎</div><h3>현장 인력 연결</h3><p>지역, 공종, 단가, 숙식과 출퇴근 조건을 명확하게 보여 사람과 현장을 연결합니다.</p></div>
+  </div>
+  <div class="memberBox">
+   <div class="memberTop">
+    <div><h3>비계PRO 앱 회원 전용 다운로드</h3><p>사이트 회원가입 후 로그인하면 앱을 받을 수 있습니다.</p></div>
+    <div class="memberActions"><button class="memberBtn gold" id="joinBtn">회원가입</button><button class="memberBtn dark" id="loginBtn">로그인</button><button class="memberBtn gray" id="logoutBtn" style="display:none">로그아웃</button></div>
+   </div>
+   <div class="memberStatus" id="memberStatus"></div>
+  </div>
+ </div>
+</section>
+
+<section class="network" id="network">
+ <div class="wrap networkGrid">
+  <div>
+   <div class="kicker">★ 비계PRO ★ 전국 인력네트워크</div>
+   <div class="quote">無에서 有를 만드는<br><span>하늘의 목수, 비계공.</span></div>
+   <p>아무것도 없는 공간에 가장 먼저 길을 만들고, 우리가 세운 발판 위에서 대한민국의 산업현장이 완성됩니다.</p>
+   <p>비계는 단순한 철파이프가 아닙니다. 사람의 생명과 안전을 지키는 현장의 첫 구조물이며, 우리는 그 현장을 지탱하는 전문 기술자입니다.</p>
+  </div>
+  <div class="flow">
+   <div class="flowItem"><div class="num">01</div><div><b>전국 현장</b><small>반도체 · 플랜트 · 조선 · 건설현장</small></div></div>
+   <div class="flowItem"><div class="num">02</div><div><b>전문 인력</b><small>비계공 · 시스템비계 · 유도원 · 신호수</small></div></div>
+   <div class="flowItem"><div class="num">03</div><div><b>비계PRO 앱</b><small>공수 · 급여 · 작업일지 · 구인관리</small></div></div>
+   <div class="flowItem"><div class="num">04</div><div><b>BAND 네트워크</b><small>모집정보와 현장소식을 빠르게 연결</small></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="jobs" id="jobs">
+ <div class="wrap">
+  <div class="eyebrow">JOBS & PEOPLE</div>
+  <h2>좋은 현장과<br>좋은 사람을 연결합니다.</h2>
+  <p class="desc">지역·공종·단가·기간·숙식·출퇴근 조건을 보기 쉽게 정리해 필요한 인력과 현장이 더 빠르게 만날 수 있도록 합니다.</p>
+  <div class="jobbar"><span>평택·고덕 삼성</span><span>기흥 삼성</span><span>탕정 삼성</span><span>이천·청주 하이닉스</span><span>전국 플랜트</span><span>조선소</span><span>시스템비계</span><span>유도원·신호수</span></div>
+ </div>
+</section>
+
+<section class="cta" id="band">
+ <div class="wrap ctabox">
+  <div><h2>★비계PRO★ 전국 인력네트워크</h2><p>앱 · 홈페이지 · BAND를 하나로 연결하는 대한민국 비계인의 네트워크.</p></div>
+  <a class="darkbtn" href="https://band.us/@bliss" target="_blank" rel="noopener">BAND 바로가기</a>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap foot"><div><b style="color:#fff">비계PRO</b> · 비계의 기준, 프로의 가치</div><div>© 2026 BIGYE.KR. All rights reserved.</div></div>
+</footer>
+<div class="modalBack" id="authModal" aria-hidden="true">
+ <div class="authModal">
+  <button class="closeBtn" id="closeAuth" aria-label="닫기">×</button>
+  <h3 id="authTitle">회원가입</h3><p id="authSub">비계PRO 회원으로 가입하세요.</p>
+  <input class="authInput" id="email" type="email" placeholder="이메일 주소" autocomplete="email">
+  <input class="authInput" id="password" type="password" placeholder="비밀번호 6자리 이상" autocomplete="current-password">
+  <button class="authMain" id="emailAuthBtn">회원가입</button>
+  <div class="authDivider">또는 간편하게 시작하기</div>
+  <button class="socialBtn" id="googleBtn">G　구글로 계속하기</button>
+  <button class="socialBtn kakao" id="kakaoBtn">●　카카오로 계속하기</button>
+  <p class="authMsg" id="authMsg"></p>
+  <div class="authSwitch"><span id="switchText">이미 회원이신가요?</span> <button id="switchMode">로그인</button></div>
+ </div>
+</div>
+<script type="module">
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+ import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, signOut, GoogleAuthProvider, OAuthProvider } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+ import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-storage.js";
+ const firebaseConfig={apiKey:"AIzaSyATdI-CqYhEISlZh5j0G144nYabGiuCEu4",authDomain:"bigyepro-c81bf.firebaseapp.com",projectId:"bigyepro-c81bf",storageBucket:"bigyepro-c81bf.firebasestorage.app",messagingSenderId:"1012937115783",appId:"1:1012937115783:android:a5e7cc4f15360d09e79022"};
+ const app=initializeApp(firebaseConfig),auth=getAuth(app),storage=getStorage(app);
+ const $=id=>document.getElementById(id); let joinMode=true;
+ function openAuth(join){joinMode=join;$("authModal").classList.add("open");$("authModal").setAttribute("aria-hidden","false");renderMode();}
+ function closeAuth(){$("authModal").classList.remove("open");$("authModal").setAttribute("aria-hidden","true");$("authMsg").textContent="";}
+ function renderMode(){$("authTitle").textContent=joinMode?"회원가입":"로그인";$("authSub").textContent=joinMode?"비계PRO 회원으로 가입하세요.":"가입한 계정으로 로그인하세요.";$("emailAuthBtn").textContent=joinMode?"회원가입":"로그인";$("switchText").textContent=joinMode?"이미 회원이신가요?":"아직 회원이 아니신가요?";$("switchMode").textContent=joinMode?"로그인":"회원가입";$("authMsg").textContent="";}
+ function message(error){const code=error?.code||"";if(code.includes("email-already"))return"이미 가입된 이메일입니다.";if(code.includes("invalid-credential"))return"이메일 또는 비밀번호를 확인해주세요.";if(code.includes("weak-password"))return"비밀번호는 6자리 이상 입력해주세요.";if(code.includes("popup-closed"))return"로그인이 취소되었습니다.";if(code.includes("unauthorized-domain"))return"Firebase 승인 도메인에 bigye.kr을 추가해야 합니다.";return error?.message||"잠시 후 다시 시도해주세요.";}
+ $("joinBtn").onclick=()=>openAuth(true);$("loginBtn").onclick=()=>openAuth(false);$("closeAuth").onclick=closeAuth;$("authModal").onclick=e=>{if(e.target===$("authModal"))closeAuth();};$("switchMode").onclick=()=>{joinMode=!joinMode;renderMode();};
+ $("emailAuthBtn").onclick=async()=>{try{const email=$("email").value.trim(),pw=$("password").value;if(joinMode)await createUserWithEmailAndPassword(auth,email,pw);else await signInWithEmailAndPassword(auth,email,pw);closeAuth();}catch(e){$("authMsg").textContent=message(e);}};
+ $("googleBtn").onclick=async()=>{try{await signInWithPopup(auth,new GoogleAuthProvider());closeAuth();}catch(e){$("authMsg").textContent=message(e);}};
+ $("kakaoBtn").onclick=async()=>{try{await signInWithPopup(auth,new OAuthProvider("oidc.kakao"));closeAuth();}catch(e){$("authMsg").textContent=message(e);}};
+ $("logoutBtn").onclick=()=>signOut(auth);
+ async function downloadApp(){if(!auth.currentUser){openAuth(false);return;}const btn=$("appDownloadBtn");btn.textContent="다운로드 준비 중...";try{const url=await getDownloadURL(ref(storage,"releases/bigyepro.apk"));location.href=url;}catch(e){btn.textContent="비계PRO 앱 다운로드";alert("앱 파일 준비 중입니다. 관리자에게 문의해주세요.");}}
+ onAuthStateChanged(auth,user=>{if(user){$("joinBtn").style.display="none";$("loginBtn").style.display="none";$("logoutBtn").style.display="inline-block";$("memberStatus").className="memberStatus show";$("memberStatus").innerHTML=`<b>${user.displayName||user.email||"회원"}님, 환영합니다.</b><br>회원 인증이 완료되었습니다.<br><button class="downloadBtn" id="appDownloadBtn" style="border:0;cursor:pointer">비계PRO 앱 다운로드</button>`;$("appDownloadBtn").onclick=downloadApp;}else{$("joinBtn").style.display="inline-block";$("loginBtn").style.display="inline-block";$("logoutBtn").style.display="none";$("memberStatus").className="memberStatus";$("memberStatus").innerHTML="";}});
+</script>
+</body>
+</html>
