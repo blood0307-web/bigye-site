@@ -7,55 +7,52 @@
 <meta name="description" content="비계PRO 전국 인력네트워크 - 반도체·플랜트·시스템비계·유도원·신호수 구인구직과 현장정보를 연결합니다.">
 <style>
 :root{
-  --black:#10242c;--panel:#17323c;--panel2:#23444e;
-  --gold:#edb52b;--gold2:#ffd66b;--white:#f8faf9;
-  --muted:#8ea0a5;--line:#31515b;--cream:#edf3f3;--blue:#1c6673;
+  --black:#090a0c;--panel:#14161a;--panel2:#1d2025;
+  --gold:#e0ad32;--gold2:#ffd66b;--white:#f7f7f5;
+  --muted:#a8abb1;--line:#30343b;--cream:#f5f1e8;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Pretendard,"Noto Sans KR",Arial,sans-serif;background:#edf3f3;color:#172126}
+body{margin:0;font-family:Pretendard,"Noto Sans KR",Arial,sans-serif;background:var(--black);color:var(--white)}
 a{text-decoration:none;color:inherit}
 .wrap{width:min(1160px,calc(100% - 36px));margin:auto}
-nav{position:sticky;top:0;z-index:20;background:rgba(16,36,44,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 8px 26px rgba(16,36,44,.12)}
+nav{position:sticky;top:0;z-index:20;background:rgba(9,10,12,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px}.brandSymbol{width:44px;height:44px;object-fit:contain}.navWordmark{width:150px;height:46px;object-fit:contain;object-position:left center}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:22px}
 .mark{width:42px;height:42px;border:2px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-weight:1000}
 .brand b{color:var(--gold)}
 .menu{display:flex;gap:26px;color:#d7d7d7;font-size:14px}
-.navbtn{padding:11px 16px;background:var(--gold);color:#13232a;border-radius:10px;font-weight:900}
-.hero{min-height:600px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(130deg,#f8faf9 0%,#edf4f4 58%,#dce9e9 100%);color:#172126;border-bottom:10px solid var(--gold)}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.7%,rgba(28,102,115,.05) 50%,transparent 50.3%),linear-gradient(0deg,transparent 49.7%,rgba(28,102,115,.05) 50%,transparent 50.3%);background-size:120px 120px}
-.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:repeating-linear-gradient(135deg,#111 0 16px,var(--gold) 16px 32px)}
+.navbtn{padding:11px 16px;background:var(--gold);color:#111;border-radius:10px;font-weight:900}
+.hero{min-height:690px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:580px;height:580px;border:1px solid rgba(224,173,50,.17);border-radius:50%;right:-100px;top:40px;box-shadow:0 0 100px rgba(224,173,50,.08)}
+.hero:after{content:"";position:absolute;width:360px;height:360px;background:radial-gradient(circle,rgba(224,173,50,.12),transparent 67%);right:90px;top:150px}
 .heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center;position:relative;z-index:2}
-.kicker{display:inline-block;color:#164f5a;background:#dcebed;border:1px solid #c5dcdf;border-radius:999px;padding:8px 12px;font-size:14px;font-weight:900;letter-spacing:.02em;margin-bottom:18px}
+.kicker{color:var(--gold);font-size:14px;font-weight:900;letter-spacing:.16em;margin-bottom:18px}
 h1{font-size:clamp(44px,6vw,78px);line-height:1.08;margin:0 0 24px;letter-spacing:-.055em}
-h1 em{font-style:normal;color:#176574}
-.lead{font-size:20px;line-height:1.75;color:#585858;max-width:680px;margin:0}
+h1 em{font-style:normal;color:var(--gold)}
+.lead{font-size:20px;line-height:1.75;color:#c6c8cc;max-width:680px;margin:0}
 .chips{display:flex;flex-wrap:wrap;gap:9px;margin:26px 0 34px}
-.chip{border:1px solid #d7cdbd;background:#fff;padding:9px 13px;border-radius:999px;color:#333;font-size:13px}
+.chip{border:1px solid var(--line);background:#111318;padding:9px 13px;border-radius:999px;color:#ddd;font-size:13px}
 .actions{display:flex;gap:12px;flex-wrap:wrap}
 .btn{padding:15px 22px;border-radius:12px;font-weight:900;border:1px solid var(--line)}
-.btn.primary{background:var(--gold);color:#12242b;border-color:var(--gold);box-shadow:0 10px 24px rgba(237,181,43,.2)}
-.btn.ghost{background:#16313a;color:#fff}
-.heroCard{background:rgba(255,255,255,.9);border:1px solid #cddedf;border-radius:28px;padding:24px;box-shadow:0 28px 70px rgba(20,73,83,.16)}
-.heroLogo{position:relative;border:1px solid #c9d9dc;border-radius:22px;padding:0;text-align:center;background:#10242c;overflow:hidden}
-.heroBrandImage{width:100%;height:300px;object-fit:cover;border-radius:20px;display:block}.heroLogo:after{content:"일 끝나고, 우리끼리 편하게";position:absolute;left:16px;bottom:16px;background:rgba(16,36,44,.88);color:#fff;border-left:5px solid var(--gold);border-radius:8px;padding:11px 14px;font-weight:900;font-size:14px}
-.heroMascot{position:absolute!important;right:-12px;bottom:-22px;width:126px;z-index:5!important;filter:drop-shadow(0 10px 13px rgba(0,0,0,.22))}.heroSymbol{position:absolute!important;right:16px;top:16px;width:66px;height:66px;object-fit:contain;background:rgba(255,255,255,.92);border-radius:17px;padding:7px;z-index:5!important;box-shadow:0 8px 25px rgba(0,0,0,.16)}
-.heroIdentity{display:flex;align-items:center;gap:12px;margin-bottom:18px}.heroIdentity img{width:210px;max-height:72px;object-fit:contain;object-position:left center}.heroIdentity span{height:32px;width:1px;background:#b9ced1}.heroIdentity b{color:#1b5965;font-size:13px;line-height:1.45}
+.btn.primary{background:var(--gold);color:#111;border-color:var(--gold)}
+.btn.ghost{background:#15171b}
+.heroCard{background:linear-gradient(145deg,#1c1f24,#101215);border:1px solid #333841;border-radius:28px;padding:28px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.heroLogo{border:1px solid rgba(224,173,50,.4);border-radius:22px;padding:34px 24px;text-align:center;background:#0d0f12}
 .heroLogo .symbol{font-size:54px;color:var(--gold);font-weight:1000}
 .heroLogo .word{font-size:36px;font-weight:1000;letter-spacing:-.05em;margin-top:8px}.heroLogo .word span{color:var(--gold)}
 .statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
-.stat{background:#f4f8f8;border:1px solid #d5e2e3;border-radius:16px;padding:15px;text-align:center}
-.stat strong{display:block;color:#185e6b;font-size:17px}.stat small{color:#718186}
+.stat{background:#101216;border:1px solid #2b2f36;border-radius:16px;padding:15px;text-align:center}
+.stat strong{display:block;color:var(--gold2);font-size:18px}.stat small{color:var(--muted)}
 section{padding:96px 0}
-.light{background:#f7faf9;color:#172126}
-.eyebrow{color:#176574;font-weight:900;font-size:13px;letter-spacing:.12em}
+.light{background:var(--cream);color:#151515}
+.eyebrow{color:#a9780e;font-weight:900;font-size:13px;letter-spacing:.12em}
 h2{font-size:clamp(34px,4vw,52px);letter-spacing:-.045em;margin:10px 0 14px}
 .desc{color:#666;line-height:1.75;font-size:17px;max-width:760px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
-.card{background:#fff;border:1px solid #d7e2e2;border-radius:22px;padding:26px;min-height:210px;box-shadow:0 14px 35px rgba(20,73,83,.06);border-top:4px solid var(--gold)}
+.card{background:#fff;border:1px solid #e5dfd2;border-radius:22px;padding:26px;min-height:210px;box-shadow:0 14px 35px rgba(40,30,10,.05)}
 .icon{font-size:30px}.card h3{font-size:22px;margin:16px 0 10px}.card p{color:#6b6b6b;line-height:1.7;margin:0}
-.network{background:linear-gradient(135deg,#10242c,#173843)}
+.network{background:#0c0e11}
 .networkGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
 .quote{font-size:30px;line-height:1.5;font-weight:900;letter-spacing:-.035em}
 .quote span{color:var(--gold)}
@@ -64,7 +61,7 @@ h2{font-size:clamp(34px,4vw,52px);letter-spacing:-.045em;margin:10px 0 14px}
 .flowItem{display:flex;align-items:center;gap:18px;background:#15181d;border:1px solid #30343c;border-radius:18px;padding:20px}
 .num{width:44px;height:44px;flex:0 0 44px;border-radius:12px;background:var(--gold);color:#111;display:grid;place-items:center;font-weight:1000}
 .flowItem b{display:block;font-size:18px;margin-bottom:4px}.flowItem small{color:var(--muted)}
-.jobs{background:#edf3f3;color:#172126}
+.jobs{background:#f7f7f5;color:#151515}
 .jobbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
 .jobbar span{padding:10px 14px;border-radius:10px;background:#fff;border:1px solid #ddd8cc;font-weight:700}
 .cta{padding:70px 0;background:linear-gradient(135deg,#dca72b,#f3cb62);color:#111}
@@ -78,27 +75,6 @@ h2{font-size:clamp(34px,4vw,52px);letter-spacing:-.045em;margin:10px 0 14px}
 .memberBtn.gold{background:var(--gold);color:#111}.memberBtn.dark{background:#111;color:#fff}.memberBtn.gray{background:#e8e5df;color:#333}
 .memberStatus{display:none;margin-top:20px;padding:17px;border-radius:14px;background:#f5f1e8;color:#333}.memberStatus.show{display:block}
 .downloadBtn{display:inline-block;margin-top:12px;background:#111;color:#fff;border-radius:11px;padding:14px 20px;font-weight:900}
-.community{background:#edf3f3;color:#172126;padding:78px 0}
-.communityHead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
-.communityHead h2{margin-bottom:6px}.communityHead p{margin:0;color:#666}
-.writeBtn{border:0;background:#111;color:#fff;border-radius:12px;padding:15px 22px;font-size:16px;font-weight:900;cursor:pointer}
-.tabs{display:flex;gap:8px;overflow:auto;padding:24px 0 16px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
-.tab{flex:0 0 auto;border:1px solid #d8d1c4;background:#fff;border-radius:999px;padding:10px 15px;font-weight:800;cursor:pointer}.tab.active{background:var(--gold);border-color:var(--gold);color:#111}
-.postGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.postCard{background:#fff;border:1px solid #d4e0e1;border-radius:18px;padding:20px;cursor:pointer;transition:.18s;min-height:154px;box-shadow:0 8px 22px rgba(20,73,83,.04)}.postCard:hover{transform:translateY(-3px);border-color:#9dbfc4;box-shadow:0 15px 32px rgba(20,73,83,.11)}
-.postTop{display:flex;justify-content:space-between;gap:12px;align-items:center}.postCat{display:inline-block;background:#dcecee;color:#175763;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:900}.postDate{color:#89989c;font-size:12px}
-.postCard h3{font-size:20px;margin:15px 0 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.postPreview{color:#666;line-height:1.55;height:49px;overflow:hidden;margin:0}.postMeta{margin-top:13px;color:#999;font-size:12px}
-.emptyPosts{grid-column:1/-1;text-align:center;background:#fff;border:1px dashed #d6cec0;border-radius:18px;padding:55px 20px;color:#777}.emptyPosts b{display:block;color:#222;font-size:20px;margin-bottom:8px}
-.postModal{width:min(650px,100%);max-height:90vh;overflow:auto;background:#fff;color:#171717;border-radius:23px;padding:28px;position:relative}.postModal h3{font-size:27px;margin:0 0 18px}
-.formLabel{display:block;font-weight:900;margin:13px 0 6px}.postSelect,.postInput,.postText{width:100%;border:1px solid #d7d2c7;border-radius:10px;padding:13px;font:inherit}.postText{min-height:180px;resize:vertical;line-height:1.6}
-.formActions{display:flex;justify-content:flex-end;gap:9px;margin-top:16px}.cancelBtn,.saveBtn,.deleteBtn{border:0;border-radius:10px;padding:12px 17px;font-weight:900;cursor:pointer}.cancelBtn{background:#ece9e3}.saveBtn{background:var(--gold)}.deleteBtn{background:#b8322a;color:#fff;margin-right:auto}
-.detailCat{display:inline-block;background:#f2e5bd;color:#795500;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:900}.detailTitle{font-size:27px!important;margin:13px 0 8px!important}.detailMeta{color:#888;font-size:13px;border-bottom:1px solid #eee;padding-bottom:15px}.detailBody{white-space:pre-wrap;line-height:1.8;padding:20px 0;min-height:100px}
-.commentArea{border-top:1px solid #eee;padding-top:18px}.commentArea h4{margin:0 0 13px}.commentRow{background:#f6f3ed;border-radius:11px;padding:12px;margin:8px 0}.commentRow b{font-size:13px}.commentRow p{margin:5px 0 0;white-space:pre-wrap;line-height:1.5}.commentWrite{display:flex;gap:8px;margin-top:12px}.commentInput{flex:1;border:1px solid #d7d2c7;border-radius:10px;padding:12px;font:inherit}.commentBtn{border:0;background:#111;color:#fff;border-radius:10px;padding:0 16px;font-weight:900;cursor:pointer}
-.noticeLine{background:#17191d;color:#fff;border-radius:16px;padding:18px 20px;margin-bottom:14px;display:flex;gap:12px;align-items:center}.noticeLine b{color:var(--gold)}
-.quickBoard{background:#fff;border-bottom:1px solid #d7e3e4}.quickGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;padding:18px 0}.quickLink{background:#f4f8f8;border:1px solid #d6e3e4;border-radius:14px;padding:14px 10px;text-align:center;font-weight:900;color:#21444d;transition:.18s}.quickLink:hover{background:#17343e;color:#fff;transform:translateY(-2px)}.quickLink strong{display:block;color:#d29400;font-size:12px;margin-bottom:4px}
-.adminBtn{display:none;border:1px solid var(--gold);background:#111;color:var(--gold);border-radius:10px;padding:10px 14px;font-weight:900;cursor:pointer}.adminBtn.show{display:inline-block}.adminModal{width:min(900px,100%);max-height:92vh;overflow:auto;background:#f5f1e8;color:#171717;border-radius:23px;padding:28px;position:relative}.adminModal h3{font-size:28px;margin:0 0 5px}.adminSub{color:#666;margin:0 0 20px}.adminStats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}.adminStat{background:#17191d;color:#fff;border-radius:15px;padding:17px}.adminStat b{display:block;color:var(--gold);font-size:25px}.adminTools{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:16px}.adminList{display:grid;gap:9px}.adminRow{background:#fff;border:1px solid #ddd7ca;border-radius:14px;padding:15px;display:flex;justify-content:space-between;align-items:center;gap:15px}.adminRowMain{min-width:0}.adminRowMain b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.adminRowMain small{color:#777}.adminDelete{border:0;background:#b8322a;color:#fff;border-radius:9px;padding:9px 12px;font-weight:900;cursor:pointer;white-space:nowrap}
-.brandShowcase{background:#10242c;padding:70px 0}.brandShowGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.brandAd{position:relative;overflow:hidden;min-height:370px;border:1px solid #31515b;border-radius:26px;background:linear-gradient(140deg,#1c404a,#10242c);padding:34px;display:flex;flex-direction:column;justify-content:flex-end}.brandAd:after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;border:1px solid rgba(237,181,43,.28);right:-70px;top:-70px}.brandAd>*{position:relative;z-index:2}.brandWordmark{width:min(520px,78%);max-height:130px;object-fit:contain;object-position:left center;margin-bottom:18px}.brandAd h2{font-size:40px;margin:0 0 10px;color:#fff}.brandAd p{color:#c8d3d5;line-height:1.7;margin:0;max-width:600px}.brandSide{display:grid;grid-template-columns:1fr 1fr;gap:18px}.assetCard{background:#17313a;border:1px solid #31515b;border-radius:25px;padding:22px;text-align:center;display:flex;flex-direction:column;justify-content:center}.assetCard img{width:100%;max-height:220px;object-fit:contain}.assetCard b{display:block;color:var(--gold);font-size:18px;margin-top:10px}.assetCard small{color:#aebdc0;margin-top:5px}.fieldBanner{grid-column:1/-1;border-radius:24px;background:linear-gradient(105deg,#e5ae25,#f5cf66);color:#10242c;padding:25px 30px;display:flex;justify-content:space-between;align-items:center;gap:18px}.fieldBanner strong{font-size:25px}.fieldBanner span{display:block;margin-top:6px}.fieldBanner a{background:#10242c;color:#fff;padding:14px 18px;border-radius:11px;font-weight:900;white-space:nowrap}
-.postPhoto{width:100%;height:180px;object-fit:cover;border-radius:12px;margin-top:12px}.detailPhoto{width:100%;max-height:480px;object-fit:contain;background:#111;border-radius:14px;margin:15px 0}.photoHelp{font-size:12px;color:#777;margin-top:5px}
 .modalBack{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.72);align-items:center;justify-content:center;padding:18px}.modalBack.open{display:flex}
 .authModal{width:min(440px,100%);background:#fff;color:#151515;border-radius:23px;padding:28px;position:relative}.authModal h3{font-size:27px;margin:0 0 6px}.authModal>p{color:#666;margin:0 0 20px}
 .closeBtn{position:absolute;right:18px;top:15px;border:0;background:transparent;font-size:27px;cursor:pointer}.authInput{width:100%;border:1px solid #d7d2c7;border-radius:10px;padding:14px;margin:6px 0;font-size:16px}
@@ -110,60 +86,34 @@ footer{padding:38px 0;color:#8f9298;border-top:1px solid #24272d}
 @media(max-width:820px){
  .menu{display:none}.hero{min-height:auto;padding:80px 0}.heroGrid,.networkGrid{grid-template-columns:1fr}
  .heroCard{margin-top:10px}.cards{grid-template-columns:1fr}.ctabox,.foot{align-items:flex-start;flex-direction:column}
- section{padding:70px 0}.statrow{grid-template-columns:1fr 1fr 1fr}.postGrid{grid-template-columns:1fr}.community{padding:60px 0}.commentWrite{flex-direction:column}.commentBtn{padding:12px}.brandShowGrid{grid-template-columns:1fr}.brandSide{grid-template-columns:1fr 1fr}.brandAd{min-height:310px}.fieldBanner{align-items:flex-start;flex-direction:column}.adminStats{grid-template-columns:1fr}.adminRow{align-items:flex-start}.quickGrid{grid-template-columns:repeat(3,1fr)}
+ section{padding:70px 0}.statrow{grid-template-columns:1fr 1fr 1fr}
 }
-@media(max-width:520px){.quickGrid{grid-template-columns:repeat(2,1fr)}.heroBrandImage{height:230px}}
 </style>
 </head>
 <body>
 <nav>
   <div class="wrap nav">
-    <a class="brand" href="#"><img class="brandSymbol" src="assets/bigye_logo.png" alt="비계PRO 심볼"><img class="navWordmark" src="assets/bigye_wordmark.png" alt="비계PRO"></a>
-    <div class="menu"><a href="#community">커뮤니티</a><a href="#community" data-go-category="구인">구인·구직</a><a href="#app">비계PRO 앱</a><a href="#band">BAND</a></div>
-    <div style="display:flex;gap:8px;align-items:center"><button class="adminBtn" id="adminRoomBtn">관리방</button><a class="navbtn" href="#community">글 보러가기</a></div>
+    <a class="brand" href="#"><div class="mark">B</div><div>비계<span style="color:#e0ad32">PRO</span></div></a>
+    <div class="menu"><a href="#network">인력네트워크</a><a href="#jobs">구인·구직</a><a href="#app">비계PRO 앱</a><a href="#band">BAND</a></div>
+    <a class="navbtn" href="#jobs">현장 연결하기</a>
   </div>
 </nav>
 
 <header class="hero">
  <div class="wrap heroGrid">
   <div>
-   <div class="heroIdentity"><img src="assets/bigye_wordmark.png" alt="비계PRO 워드마크"><span></span><b>현장과 사람을 잇는<br>비계 전문 커뮤니티</b></div>
-   <div class="kicker">비계인의 현장 사랑방</div>
-   <h1>일 끝나고<br><em>잠깐 쉬었다 가요.</em></h1>
-   <p class="lead">오늘 현장은 어땠어요? 일자리도 찾고, 기술도 묻고, 힘들었던 이야기도 풀고, 유머 보며 웃어가는 우리들의 공간입니다.</p>
-   <div class="chips"><span class="chip">오늘의 현장</span><span class="chip">구인·구직</span><span class="chip">비계 기술</span><span class="chip">현장 사진</span><span class="chip">자유수다</span><span class="chip">유머 한판</span></div>
-   <div class="actions"><a class="btn primary" href="#community">사랑방 들어가기</a><a class="btn ghost" href="#app">비계PRO 앱 받기</a></div>
+   <div class="kicker">BIGYE PRO · NATIONAL WORKFORCE NETWORK</div>
+   <h1>대한민국 비계인을<br><em>하나로 연결하다.</em></h1>
+   <p class="lead">전국의 현장과 사람을 연결하고, 비계인의 기술과 안전, 일자리와 경험을 함께 나누는 전문 인력 플랫폼.</p>
+   <div class="chips"><span class="chip">시스템비계</span><span class="chip">반도체</span><span class="chip">플랜트</span><span class="chip">유도원</span><span class="chip">신호수</span><span class="chip">화기감시</span></div>
+   <div class="actions"><a class="btn primary" href="#jobs">구인·구직 보기</a><a class="btn ghost" href="#app">비계PRO 앱</a></div>
   </div>
   <div class="heroCard">
-   <div class="heroLogo"><img class="heroBrandImage" src="assets/site_hero_rest.png" alt="일을 마치고 쉬며 이야기하는 비계공들"><img class="heroSymbol" src="assets/bigye_logo.png" alt="비계PRO 심볼"><img class="heroMascot" src="assets/bigye_mascot.png" alt="비계PRO 마스코트 비티"></div>
-   <div class="statrow"><div class="stat"><strong>현장 얘기</strong><small>오늘도 한마디</small></div><div class="stat"><strong>일자리</strong><small>서로 연결</small></div><div class="stat"><strong>쉬는 시간</strong><small>웃고 가요</small></div></div>
+   <div class="heroLogo"><div class="symbol">★</div><div class="word">비계<span>PRO</span></div><div style="color:#aaa;margin-top:7px">전국 인력네트워크</div></div>
+   <div class="statrow"><div class="stat"><strong>현장</strong><small>전국 연결</small></div><div class="stat"><strong>인력</strong><small>빠른 매칭</small></div><div class="stat"><strong>기술</strong><small>경험 공유</small></div></div>
   </div>
  </div>
 </header>
-
-<div class="quickBoard" aria-label="빠른 메뉴"><div class="wrap quickGrid"><a class="quickLink" href="#community" data-go-category="현장소식"><strong>NEW</strong>현장소식</a><a class="quickLink" href="#community" data-go-category="구인"><strong>JOBS</strong>구인정보</a><a class="quickLink" href="#community" data-go-category="구직"><strong>PEOPLE</strong>구직정보</a><a class="quickLink" href="#community" data-go-category="비계기술"><strong>SKILL</strong>비계기술</a><a class="quickLink" href="#community" data-go-category="현장사진"><strong>PHOTO</strong>현장사진</a><a class="quickLink" href="#community" data-go-category="유머"><strong>REST</strong>유머·수다</a></div></div>
-
-<section class="brandShowcase" aria-label="비계PRO 소개">
- <div class="wrap brandShowGrid">
-  <div class="brandAd"><img class="brandWordmark" src="assets/bigye_wordmark.png" alt="비계PRO"><h2>비계인의 기술과 일자리를 연결합니다.</h2><p>현장에서 쌓은 경험이 기술이 되고, 좋은 사람이 좋은 현장과 만나는 대한민국 비계 전문 커뮤니티.</p></div>
-  <div class="brandSide"><div class="assetCard"><img src="assets/bigye_logo.png" alt="비계PRO 심볼"><b>비계PRO 심볼</b><small>현장을 연결하는 전문 플랫폼</small></div><div class="assetCard"><img src="assets/bigye_mascot.png" alt="비계PRO 마스코트 비티"><b>마스코트 비티</b><small>비계인과 함께하는 현장 친구</small></div></div>
-  <div class="fieldBanner"><div><strong>오늘의 현장, 오늘의 사람을 만나보세요.</strong><span>구인·구직부터 현장사진, 기술정보와 쉬어가는 유머까지 한곳에서.</span></div><a href="#community">커뮤니티 입장</a></div>
- </div>
-</section>
-
-<section class="community" id="community">
- <div class="wrap">
-  <div class="noticeLine"><b>비계PRO 오늘의 소식</b><span>현장·반도체·플랜트 소식부터 일자리, 기술, 웃고 쉬어가는 유머까지 함께 나누는 공간입니다.</span></div>
-  <div class="communityHead">
-   <div><div class="eyebrow">BIGYE PEOPLE COMMUNITY</div><h2>비계인들의 살아있는 이야기</h2><p>새로운 현장과 산업 소식을 보고, 회원은 글과 댓글로 서로 소통할 수 있습니다.</p></div>
-   <button class="writeBtn" id="writePostBtn">＋ 글쓰기</button>
-  </div>
-  <div class="tabs" id="communityTabs">
-   <button class="tab active" data-category="전체">전체</button><button class="tab" data-category="현장소식">현장소식</button><button class="tab" data-category="반도체">반도체</button><button class="tab" data-category="플랜트">플랜트</button><button class="tab" data-category="구인">구인</button><button class="tab" data-category="구직">구직</button><button class="tab" data-category="비계기술">비계기술</button><button class="tab" data-category="안전표지">안전표지</button><button class="tab" data-category="현장사진">현장사진</button><button class="tab" data-category="자유수다">자유수다</button><button class="tab" data-category="유머">유머</button>
-  </div>
-  <div class="postGrid" id="postGrid"><div class="emptyPosts"><b>게시글을 불러오는 중입니다.</b>잠시만 기다려주세요.</div></div>
- </div>
-</section>
 
 <section class="light" id="app">
  <div class="wrap">
@@ -221,29 +171,6 @@ footer{padding:38px 0;color:#8f9298;border-top:1px solid #24272d}
 <footer>
  <div class="wrap foot"><div><b style="color:#fff">비계PRO</b> · 비계의 기준, 프로의 가치</div><div>© 2026 BIGYE.KR. All rights reserved.</div></div>
 </footer>
-<div class="modalBack" id="postEditor" aria-hidden="true">
- <div class="postModal">
-  <button class="closeBtn" id="closePostEditor" aria-label="닫기">×</button><h3 id="postEditorTitle">새 글 작성</h3>
-  <label class="formLabel" for="postCategory">게시판</label><select class="postSelect" id="postCategory"><option>현장소식</option><option>반도체</option><option>플랜트</option><option>구인</option><option>구직</option><option>비계기술</option><option>안전표지</option><option>현장사진</option><option>자유수다</option><option>유머</option></select>
-  <label class="formLabel" for="postTitle">제목</label><input class="postInput" id="postTitle" maxlength="80" placeholder="제목을 입력하세요">
-  <label class="formLabel" for="postBody">내용</label><textarea class="postText" id="postBody" maxlength="5000" placeholder="내용을 입력하세요"></textarea>
-  <label class="formLabel" for="postPhoto">현장사진·유머사진 (선택)</label><input class="postInput" id="postPhoto" type="file" accept="image/*"><div class="photoHelp">사진은 10MB 이하 한 장을 올릴 수 있습니다.</div>
-  <div class="formActions"><button class="deleteBtn" id="deletePostBtn" style="display:none">삭제</button><button class="cancelBtn" id="cancelPostBtn">취소</button><button class="saveBtn" id="savePostBtn">게시하기</button></div>
- </div>
-</div>
-<div class="modalBack" id="postDetail" aria-hidden="true">
- <div class="postModal">
-  <button class="closeBtn" id="closePostDetail" aria-label="닫기">×</button><span class="detailCat" id="detailCategory"></span><h3 class="detailTitle" id="detailTitle"></h3><div class="detailMeta" id="detailMeta"></div><img class="detailPhoto" id="detailPhoto" alt="게시글 사진" style="display:none"><div class="detailBody" id="detailBody"></div>
-  <div class="formActions" id="ownerPostActions" style="display:none"><button class="saveBtn" id="editPostBtn">글 수정</button></div>
-  <div class="commentArea"><h4>댓글 <span id="commentCount">0</span></h4><div id="commentList"></div><div class="commentWrite"><input class="commentInput" id="commentInput" maxlength="500" placeholder="로그인 후 댓글을 남겨보세요"><button class="commentBtn" id="commentBtn">댓글 등록</button></div></div>
- </div>
-</div>
-<div class="modalBack" id="adminRoom" aria-hidden="true">
- <div class="adminModal"><button class="closeBtn" id="closeAdminRoom" aria-label="닫기">×</button><h3>비계PRO 관리방</h3><p class="adminSub">대표 관리자 전용 공간입니다. 일반 회원에게는 보이지 않습니다.</p>
-  <div class="adminStats"><div class="adminStat"><b id="adminPostCount">0</b>전체 게시글</div><div class="adminStat"><b id="adminTodayCount">0</b>오늘 등록</div><div class="adminStat"><b id="adminCategoryCount">0</b>운영 게시판</div></div>
-  <div class="adminTools"><button class="writeBtn" id="adminNoticeBtn">＋ 공지·소식 작성</button><button class="memberBtn gray" id="adminRefreshBtn">새로고침</button></div><div class="adminList" id="adminList"></div>
- </div>
-</div>
 <div class="modalBack" id="authModal" aria-hidden="true">
  <div class="authModal">
   <button class="closeBtn" id="closeAuth" aria-label="닫기">×</button>
@@ -261,13 +188,10 @@ footer{padding:38px 0;color:#8f9298;border-top:1px solid #24272d}
 <script type="module">
  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
  import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, signOut, GoogleAuthProvider, OAuthProvider } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
- import { getStorage, ref, getDownloadURL, uploadBytes } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-storage.js";
- import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, query, orderBy, onSnapshot, serverTimestamp, getDocs } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+ import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-storage.js";
  const firebaseConfig={apiKey:"AIzaSyATdI-CqYhEISlZh5j0G144nYabGiuCEu4",authDomain:"bigyepro-c81bf.firebaseapp.com",projectId:"bigyepro-c81bf",storageBucket:"bigyepro-c81bf.firebasestorage.app",messagingSenderId:"1012937115783",appId:"1:1012937115783:android:a5e7cc4f15360d09e79022"};
- const app=initializeApp(firebaseConfig),auth=getAuth(app),storage=getStorage(app),db=getFirestore(app);
- const $=id=>document.getElementById(id); const ADMIN_EMAILS=["blood0307@gmail.com"]; let joinMode=true,currentUser=null,allPosts=[],activeCategory="전체",selectedPost=null,editingPost=null,stopComments=null;
- document.querySelector(".quickBoard").after($("community"));
- const isAdmin=()=>!!currentUser&&ADMIN_EMAILS.includes((currentUser.email||"").toLowerCase());
+ const app=initializeApp(firebaseConfig),auth=getAuth(app),storage=getStorage(app);
+ const $=id=>document.getElementById(id); let joinMode=true;
  function openAuth(join){joinMode=join;$("authModal").classList.add("open");$("authModal").setAttribute("aria-hidden","false");renderMode();}
  function closeAuth(){$("authModal").classList.remove("open");$("authModal").setAttribute("aria-hidden","true");$("authMsg").textContent="";}
  function renderMode(){$("authTitle").textContent=joinMode?"회원가입":"로그인";$("authSub").textContent=joinMode?"비계PRO 회원으로 가입하세요.":"가입한 계정으로 로그인하세요.";$("emailAuthBtn").textContent=joinMode?"회원가입":"로그인";$("switchText").textContent=joinMode?"이미 회원이신가요?":"아직 회원이 아니신가요?";$("switchMode").textContent=joinMode?"로그인":"회원가입";$("authMsg").textContent="";}
@@ -278,26 +202,7 @@ footer{padding:38px 0;color:#8f9298;border-top:1px solid #24272d}
  $("kakaoBtn").onclick=async()=>{try{await signInWithPopup(auth,new OAuthProvider("oidc.kakao"));closeAuth();}catch(e){$("authMsg").textContent=message(e);}};
  $("logoutBtn").onclick=()=>signOut(auth);
  async function downloadApp(){if(!auth.currentUser){openAuth(false);return;}const btn=$("appDownloadBtn");btn.textContent="다운로드 준비 중...";try{const url=await getDownloadURL(ref(storage,"releases/bigyepro.apk"));location.href=url;}catch(e){btn.textContent="비계PRO 앱 다운로드";alert("앱 파일 준비 중입니다. 관리자에게 문의해주세요.");}}
- const escapeHtml=value=>String(value??"").replace(/[&<>'"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[ch]));
- const displayName=user=>user?.displayName||user?.email?.split("@")[0]||"회원";
- const formatDate=stamp=>{const d=stamp?.toDate?.()||new Date();return `${d.getFullYear()}.${d.getMonth()+1}.${d.getDate()}`;};
- function renderPosts(){const posts=activeCategory==="전체"?allPosts:allPosts.filter(p=>p.category===activeCategory);if(!posts.length){$("postGrid").innerHTML=`<div class="emptyPosts"><b>${activeCategory==="전체"?"첫 이야기를 기다리고 있어요.":activeCategory+" 게시판의 첫 글을 남겨주세요."}</b>로그인한 회원이라면 누구나 글을 쓸 수 있습니다.</div>`;return;}$("postGrid").innerHTML=posts.map(p=>`<article class="postCard" data-id="${p.id}"><div class="postTop"><span class="postCat">${escapeHtml(p.category)}</span><span class="postDate">${formatDate(p.createdAt)}</span></div><h3>${escapeHtml(p.title)}</h3><p class="postPreview">${escapeHtml(p.body)}</p><div class="postMeta">${escapeHtml(p.authorName||"회원")} · 댓글로 함께 이야기해요</div></article>`).join("");document.querySelectorAll(".postCard").forEach(card=>card.onclick=()=>openPost(card.dataset.id));}
- onSnapshot(query(collection(db,"posts"),orderBy("createdAt","desc")),snap=>{allPosts=snap.docs.map(d=>({id:d.id,...d.data()}));renderPosts();},()=>{$("postGrid").innerHTML='<div class="emptyPosts"><b>게시판 사용 준비가 필요합니다.</b>Firebase Firestore 데이터베이스와 보안 규칙을 확인해주세요.</div>';});
- $("communityTabs").onclick=e=>{const btn=e.target.closest(".tab");if(!btn)return;document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));btn.classList.add("active");activeCategory=btn.dataset.category;renderPosts();};
- document.querySelectorAll("[data-go-category]").forEach(a=>a.onclick=()=>{activeCategory=a.dataset.goCategory;setTimeout(()=>{const t=document.querySelector(`.tab[data-category="${activeCategory}"]`);if(t)t.click();},0);});
- function openEditor(post=null){if(!currentUser){openAuth(false);return;}editingPost=post;$("postEditorTitle").textContent=post?"글 수정":"새 글 작성";$("postCategory").value=post?.category||((activeCategory!=="전체")?activeCategory:"자유수다");$("postTitle").value=post?.title||"";$("postBody").value=post?.body||"";$("postPhoto").value="";$("deletePostBtn").style.display=post?"block":"none";$("savePostBtn").textContent=post?"수정 완료":"게시하기";$("postEditor").classList.add("open");}
- function closeEditor(){$("postEditor").classList.remove("open");editingPost=null;}
- $("writePostBtn").onclick=()=>openEditor();$("closePostEditor").onclick=closeEditor;$("cancelPostBtn").onclick=closeEditor;
- $("savePostBtn").onclick=async()=>{const category=$("postCategory").value,title=$("postTitle").value.trim(),body=$("postBody").value.trim(),photo=$("postPhoto").files[0];if(!title||!body){alert("제목과 내용을 모두 입력해주세요.");return;}if(photo&&photo.size>10*1024*1024){alert("사진은 10MB 이하만 올릴 수 있습니다.");return;}if(!currentUser){openAuth(false);return;}$("savePostBtn").disabled=true;$("savePostBtn").textContent="저장 중...";try{let photoUrl=editingPost?.photoUrl||"";if(photo){const safeName=photo.name.replace(/[^a-zA-Z0-9._-]/g,"_");const photoRef=ref(storage,`community/${currentUser.uid}/${Date.now()}_${safeName}`);await uploadBytes(photoRef,photo,{contentType:photo.type});photoUrl=await getDownloadURL(photoRef);}const data={category,title,body,photoUrl,updatedAt:serverTimestamp()};if(editingPost)await updateDoc(doc(db,"posts",editingPost.id),data);else await addDoc(collection(db,"posts"),{...data,authorId:currentUser.uid,authorName:displayName(currentUser),createdAt:serverTimestamp()});closeEditor();}catch(e){alert("글을 저장하지 못했습니다. Firestore와 사진 규칙을 확인해주세요.");}finally{$("savePostBtn").disabled=false;$("savePostBtn").textContent=editingPost?"수정 완료":"게시하기";}};
- $("deletePostBtn").onclick=async()=>{if(!editingPost||!confirm("이 글을 삭제할까요?"))return;try{await deleteDoc(doc(db,"posts",editingPost.id));closeEditor();closeDetail();}catch(e){alert("글을 삭제하지 못했습니다.");}};
- function closeDetail(){$("postDetail").classList.remove("open");if(stopComments){stopComments();stopComments=null;}selectedPost=null;}
- function openPost(id){selectedPost=allPosts.find(p=>p.id===id);if(!selectedPost)return;$("detailCategory").textContent=selectedPost.category;$("detailTitle").textContent=selectedPost.title;$("detailMeta").textContent=`${selectedPost.authorName||"회원"} · ${formatDate(selectedPost.createdAt)}`;$("detailBody").textContent=selectedPost.body;$("detailPhoto").style.display=selectedPost.photoUrl?"block":"none";$("detailPhoto").src=selectedPost.photoUrl||"";$("ownerPostActions").style.display=currentUser?.uid===selectedPost.authorId?"flex":"none";$("postDetail").classList.add("open");loadComments();}
- $("closePostDetail").onclick=closeDetail;$("editPostBtn").onclick=()=>{const p=selectedPost;closeDetail();openEditor(p);};
- function loadComments(){if(stopComments)stopComments();stopComments=onSnapshot(query(collection(db,"posts",selectedPost.id,"comments"),orderBy("createdAt","asc")),snap=>{$("commentCount").textContent=snap.size;$("commentList").innerHTML=snap.docs.map(d=>{const c=d.data();return `<div class="commentRow"><b>${escapeHtml(c.authorName||"회원")} · ${formatDate(c.createdAt)}</b><p>${escapeHtml(c.body)}</p></div>`;}).join("")||'<div style="color:#999;padding:8px 0">첫 댓글을 남겨보세요.</div>';});}
- $("commentBtn").onclick=async()=>{if(!currentUser){openAuth(false);return;}if(!selectedPost)return;const body=$("commentInput").value.trim();if(!body)return;try{await addDoc(collection(db,"posts",selectedPost.id,"comments"),{body,authorId:currentUser.uid,authorName:displayName(currentUser),createdAt:serverTimestamp()});$("commentInput").value="";}catch(e){alert("댓글을 등록하지 못했습니다.");}};
- function renderAdmin(){if(!isAdmin())return;const today=new Date();$("adminPostCount").textContent=allPosts.length;$("adminTodayCount").textContent=allPosts.filter(p=>{const d=p.createdAt?.toDate?.();return d&&d.toDateString()===today.toDateString();}).length;$("adminCategoryCount").textContent=new Set(allPosts.map(p=>p.category)).size;$("adminList").innerHTML=allPosts.map(p=>`<div class="adminRow"><div class="adminRowMain"><b>[${escapeHtml(p.category)}] ${escapeHtml(p.title)}</b><small>${escapeHtml(p.authorName||"회원")} · ${formatDate(p.createdAt)}</small></div><button class="adminDelete" data-delete-id="${p.id}">삭제</button></div>`).join("")||'<div class="emptyPosts"><b>등록된 글이 없습니다.</b></div>';document.querySelectorAll("[data-delete-id]").forEach(btn=>btn.onclick=async()=>{if(!confirm("관리자 권한으로 이 글을 삭제할까요?"))return;try{await deleteDoc(doc(db,"posts",btn.dataset.deleteId));renderAdmin();}catch(e){alert("삭제 권한을 확인해주세요.");}});}
- $("adminRoomBtn").onclick=()=>{if(!isAdmin())return;renderAdmin();$("adminRoom").classList.add("open");};$("closeAdminRoom").onclick=()=>$("adminRoom").classList.remove("open");$("adminRefreshBtn").onclick=renderAdmin;$("adminNoticeBtn").onclick=()=>{$("adminRoom").classList.remove("open");activeCategory="현장소식";openEditor();};
- onAuthStateChanged(auth,user=>{currentUser=user;$("adminRoomBtn").classList.toggle("show",isAdmin());if(user){$("joinBtn").style.display="none";$("loginBtn").style.display="none";$("logoutBtn").style.display="inline-block";$("memberStatus").className="memberStatus show";$("memberStatus").innerHTML=`<b>${displayName(user)}님, 환영합니다.</b><br>회원 인증이 완료되었습니다.<br><button class="downloadBtn" id="appDownloadBtn" style="border:0;cursor:pointer">비계PRO 앱 다운로드</button>`;$("appDownloadBtn").onclick=downloadApp;}else{$("joinBtn").style.display="inline-block";$("loginBtn").style.display="inline-block";$("logoutBtn").style.display="none";$("memberStatus").className="memberStatus";$("memberStatus").innerHTML="";}if(selectedPost)$("ownerPostActions").style.display=user?.uid===selectedPost.authorId?"flex":"none";});
+ onAuthStateChanged(auth,user=>{if(user){$("joinBtn").style.display="none";$("loginBtn").style.display="none";$("logoutBtn").style.display="inline-block";$("memberStatus").className="memberStatus show";$("memberStatus").innerHTML=`<b>${user.displayName||user.email||"회원"}님, 환영합니다.</b><br>회원 인증이 완료되었습니다.<br><button class="downloadBtn" id="appDownloadBtn" style="border:0;cursor:pointer">비계PRO 앱 다운로드</button>`;$("appDownloadBtn").onclick=downloadApp;}else{$("joinBtn").style.display="inline-block";$("loginBtn").style.display="inline-block";$("logoutBtn").style.display="none";$("memberStatus").className="memberStatus";$("memberStatus").innerHTML="";}});
 </script>
 </body>
 </html>
