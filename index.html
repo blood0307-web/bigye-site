@@ -18,10 +18,9 @@ a{text-decoration:none;color:inherit}
 .wrap{width:min(1160px,calc(100% - 36px));margin:auto}
 nav{position:sticky;top:0;z-index:20;background:rgba(16,36,44,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 8px 26px rgba(16,36,44,.12)}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;font-weight:900;font-size:22px}.brandLockup{width:285px;height:72px;object-fit:contain;background:#fff;border-radius:14px;padding:8px 14px;box-shadow:0 5px 18px rgba(0,0,0,.18)}.heroOfficialWordmark{width:330px;height:auto;display:block}.showcaseOfficialLockup{width:min(590px,92%);height:auto;display:block;background:#fff;border-radius:16px;padding:16px 20px;margin-bottom:24px;box-shadow:0 10px 26px rgba(0,0,0,.2)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:22px}.brandSymbol{width:58px;height:58px;object-fit:contain;filter:drop-shadow(0 3px 7px rgba(0,0,0,.28))}.cleanWordmark{display:inline-flex;align-items:baseline;white-space:nowrap;font-weight:1000;font-style:italic;letter-spacing:-.08em;line-height:1;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.25)}.cleanWordmark em{font:inherit;color:var(--gold);margin-left:7px;letter-spacing:-.05em}.navCleanWordmark{font-size:29px}.heroCleanWordmark{font-size:42px;color:#132e37;text-shadow:none}.showcaseCleanWordmark{font-size:64px;margin-bottom:22px}.showcaseCleanWordmark em{color:#f0bd35}
 .mark{width:42px;height:42px;border:2px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-weight:1000}
 .brand b{color:var(--gold)}
-.brandStars{color:#f4bd2f;font-weight:1000;text-shadow:0 1px 2px rgba(0,0,0,.28)}
 .menu{display:flex;gap:26px;color:#d7d7d7;font-size:14px}
 .navbtn{padding:11px 16px;background:var(--gold);color:#13232a;border-radius:10px;font-weight:900}
 .hero{min-height:600px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(130deg,#f8faf9 0%,#edf4f4 58%,#dce9e9 100%);color:#172126;border-bottom:10px solid var(--gold)}
@@ -41,7 +40,7 @@ h1 em{font-style:normal;color:#176574}
 .heroCard{background:rgba(255,255,255,.9);border:1px solid #cddedf;border-radius:28px;padding:24px;box-shadow:0 28px 70px rgba(20,73,83,.16)}
 .heroLogo{position:relative;border:1px solid #c9d9dc;border-radius:22px;padding:0;text-align:center;background:#10242c;overflow:hidden}
 .heroBrandImage{width:100%;height:300px;object-fit:cover;border-radius:20px;display:block}.heroLogo:after{content:"일 끝나고, 우리끼리 편하게";position:absolute;left:16px;bottom:16px;background:rgba(16,36,44,.88);color:#fff;border-left:5px solid var(--gold);border-radius:8px;padding:11px 14px;font-weight:900;font-size:14px}
-.heroMascot{position:absolute!important;right:-12px;bottom:-22px;width:126px;z-index:5!important;filter:drop-shadow(0 10px 13px rgba(0,0,0,.22))}.heroSymbol{position:absolute!important;right:16px;top:16px;width:82px;height:82px;object-fit:contain;background:#fff;border-radius:17px;padding:9px;z-index:5!important;box-shadow:0 8px 25px rgba(0,0,0,.18)}
+.heroMascot{position:absolute!important;right:-12px;bottom:-22px;width:126px;z-index:5!important;filter:drop-shadow(0 10px 13px rgba(0,0,0,.22))}.heroSymbol{position:absolute!important;right:16px;top:16px;width:66px;height:66px;object-fit:contain;background:rgba(255,255,255,.92);border-radius:17px;padding:7px;z-index:5!important;box-shadow:0 8px 25px rgba(0,0,0,.16)}
 .heroIdentity{display:flex;align-items:center;gap:18px;margin-bottom:22px}.heroIdentity .identityLine{height:48px;width:2px;background:#9bbdc2}.heroIdentity b{color:#155967;font-size:16px;line-height:1.5}
 .heroLogo .symbol{font-size:54px;color:var(--gold);font-weight:1000}
 .heroLogo .word{font-size:36px;font-weight:1000;letter-spacing:-.05em;margin-top:8px}.heroLogo .word span{color:var(--gold)}
@@ -68,10 +67,10 @@ h2{font-size:clamp(34px,4vw,52px);letter-spacing:-.045em;margin:10px 0 14px}
 .jobs{background:#edf3f3;color:#172126}
 .jobbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
 .jobbar span{padding:10px 14px;border-radius:10px;background:#fff;border:1px solid #ddd8cc;font-weight:700}
-.cta{padding:70px 0;background:linear-gradient(135deg,#10242c 0%,#173842 58%,#10242c 100%);color:#fff;border-top:1px solid #31515b;border-bottom:1px solid #31515b}
+.cta{padding:70px 0;background:linear-gradient(135deg,#dca72b,#f3cb62);color:#111}
 .ctabox{display:flex;justify-content:space-between;align-items:center;gap:30px}
-.ctabox h2{margin:0;font-size:38px;color:#fff}.ctabox p{margin:10px 0 0;color:#c8d5d8}
-.darkbtn{background:var(--gold);color:#10242c;padding:16px 22px;border-radius:12px;font-weight:1000;white-space:nowrap;box-shadow:0 10px 24px rgba(0,0,0,.22)}
+.ctabox h2{margin:0;font-size:38px}.ctabox p{margin:10px 0 0;color:#4d3a0a}
+.darkbtn{background:#111;color:#fff;padding:16px 22px;border-radius:12px;font-weight:900;white-space:nowrap}
 .memberBox{margin-top:38px;background:#fff;border:1px solid #e5dfd2;border-radius:22px;padding:26px;box-shadow:0 14px 35px rgba(40,30,10,.05)}
 .memberTop{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
 .memberTop h3{font-size:25px;margin:0 0 7px}.memberTop p{margin:0;color:#666;line-height:1.6}
@@ -106,20 +105,20 @@ h2{font-size:clamp(34px,4vw,52px);letter-spacing:-.045em;margin:10px 0 14px}
 .authMain{width:100%;margin-top:10px;border:0;border-radius:11px;padding:14px;background:var(--gold);font-size:16px;font-weight:900;cursor:pointer}.authDivider{text-align:center;color:#999;margin:17px 0;font-size:13px}
 .socialBtn{width:100%;border:1px solid #ddd;border-radius:11px;padding:13px;margin:5px 0;background:#fff;font-size:15px;font-weight:800;cursor:pointer}.socialBtn.kakao{background:#fee500;border-color:#fee500;color:#191919}
 .authMsg{min-height:22px;margin-top:10px!important;color:#b02a22!important;font-size:14px}.authSwitch{text-align:center;margin-top:13px;color:#555;font-size:14px}.authSwitch button{border:0;background:none;color:#9b6b00;font-weight:900;cursor:pointer}
-footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091a20}
+footer{padding:38px 0;color:#8f9298;border-top:1px solid #24272d}
 .foot{display:flex;justify-content:space-between;gap:20px;align-items:center}
 @media(max-width:820px){
  .menu{display:none}.hero{min-height:auto;padding:80px 0}.heroGrid,.networkGrid{grid-template-columns:1fr}
  .heroCard{margin-top:10px}.cards{grid-template-columns:1fr}.ctabox,.foot{align-items:flex-start;flex-direction:column}
  section{padding:70px 0}.statrow{grid-template-columns:1fr 1fr 1fr}.postGrid{grid-template-columns:1fr}.community{padding:60px 0}.commentWrite{flex-direction:column}.commentBtn{padding:12px}.brandShowGrid{grid-template-columns:1fr}.brandSide{grid-template-columns:1fr 1fr}.brandAd{min-height:310px}.fieldBanner{align-items:flex-start;flex-direction:column}.adminStats{grid-template-columns:1fr}.adminRow{align-items:flex-start}.quickGrid{grid-template-columns:repeat(3,1fr)}
 }
-@media(max-width:520px){.quickGrid{grid-template-columns:repeat(2,1fr)}.heroBrandImage{height:230px}.brandLockup{width:205px;height:57px;padding:6px 10px}.heroIdentity{gap:12px}.heroOfficialWordmark{width:220px}.heroIdentity b{font-size:13px}.showcaseOfficialLockup{width:94%;padding:12px 14px}.brandAd{padding:28px}.brandAd h2{font-size:31px}}
+@media(max-width:520px){.quickGrid{grid-template-columns:repeat(2,1fr)}.heroBrandImage{height:230px}.brandSymbol{width:48px;height:48px}.navCleanWordmark{font-size:24px}.heroIdentity{gap:12px}.heroCleanWordmark{font-size:32px}.heroIdentity b{font-size:13px}.showcaseCleanWordmark{font-size:46px}.brandAd{padding:28px}.brandAd h2{font-size:31px}}
 </style>
 </head>
 <body>
 <nav>
   <div class="wrap nav">
-    <a class="brand" href="#"><img class="brandLockup" src="assets/brand_v2/bigye_official_lockup.png" alt="비계PRO 공식 로고"></a>
+    <a class="brand" href="#"><img class="brandSymbol" src="assets/bigye_logo.png" alt="비계PRO 심볼"><span class="cleanWordmark navCleanWordmark">비계<em>PRO</em></span></a>
     <div class="menu"><a href="#community">커뮤니티</a><a href="#community" data-go-category="구인">구인·구직</a><a href="#app">비계PRO 앱</a><a href="#band">BAND</a></div>
     <div style="display:flex;gap:8px;align-items:center"><button class="adminBtn" id="adminRoomBtn">관리방</button><a class="navbtn" href="#community">글 보러가기</a></div>
   </div>
@@ -128,7 +127,7 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
 <header class="hero">
  <div class="wrap heroGrid">
   <div>
-   <div class="heroIdentity"><img class="heroOfficialWordmark" src="assets/brand_v2/bigye_official_wordmark.png" alt="비계PRO 공식 워드마크"><span class="identityLine"></span><b>현장과 사람을 잇는<br>비계 전문 커뮤니티</b></div>
+   <div class="heroIdentity"><span class="cleanWordmark heroCleanWordmark">비계<em>PRO</em></span><span class="identityLine"></span><b>현장과 사람을 잇는<br>비계 전문 커뮤니티</b></div>
    <div class="kicker">비계인의 현장 사랑방</div>
    <h1>일 끝나고<br><em>잠깐 쉬었다 가요.</em></h1>
    <p class="lead">오늘 현장은 어땠어요? 일자리도 찾고, 기술도 묻고, 힘들었던 이야기도 풀고, 유머 보며 웃어가는 우리들의 공간입니다.</p>
@@ -136,7 +135,7 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
    <div class="actions"><a class="btn primary" href="#community">사랑방 들어가기</a><a class="btn ghost" href="#app">비계PRO 앱 받기</a></div>
   </div>
   <div class="heroCard">
-   <div class="heroLogo"><img class="heroBrandImage" src="assets/site_hero_rest.png" alt="일을 마치고 쉬며 이야기하는 비계공들"><img class="heroSymbol" src="assets/brand_v2/bigye_official_symbol.png" alt="비계PRO 공식 심볼"><img class="heroMascot" src="assets/bigye_mascot.png" alt="비계PRO 마스코트 비티"></div>
+   <div class="heroLogo"><img class="heroBrandImage" src="assets/site_hero_rest.png" alt="일을 마치고 쉬며 이야기하는 비계공들"><img class="heroSymbol" src="assets/bigye_logo.png" alt="비계PRO 심볼"><img class="heroMascot" src="assets/bigye_mascot.png" alt="비계PRO 마스코트 비티"></div>
    <div class="statrow"><div class="stat"><strong>현장 얘기</strong><small>오늘도 한마디</small></div><div class="stat"><strong>일자리</strong><small>서로 연결</small></div><div class="stat"><strong>쉬는 시간</strong><small>웃고 가요</small></div></div>
   </div>
  </div>
@@ -146,8 +145,8 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
 
 <section class="brandShowcase" aria-label="비계PRO 소개">
  <div class="wrap brandShowGrid">
-  <div class="brandAd"><img class="showcaseOfficialLockup" src="assets/brand_v2/bigye_official_lockup.png" alt="비계PRO 공식 로고"><h2>비계인의 기술과 일자리를 연결합니다.</h2><p>현장에서 쌓은 경험이 기술이 되고, 좋은 사람이 좋은 현장과 만나는 대한민국 비계 전문 커뮤니티.</p></div>
-  <div class="brandSide"><div class="assetCard"><img src="assets/brand_v2/bigye_official_symbol_silver.png" alt="비계PRO 공식 은색 심볼"><b><span class="brandStars">★</span> 비계PRO <span class="brandStars">★</span> 심볼</b><small>현장을 연결하는 전문 플랫폼</small></div><div class="assetCard"><img src="assets/bigye_mascot.png" alt="비계PRO 마스코트 비티"><b>마스코트 비티</b><small>비계인과 함께하는 현장 친구</small></div></div>
+  <div class="brandAd"><div class="cleanWordmark showcaseCleanWordmark">비계<em>PRO</em></div><h2>비계인의 기술과 일자리를 연결합니다.</h2><p>현장에서 쌓은 경험이 기술이 되고, 좋은 사람이 좋은 현장과 만나는 대한민국 비계 전문 커뮤니티.</p></div>
+  <div class="brandSide"><div class="assetCard"><img src="assets/bigye_logo.png" alt="비계PRO 심볼"><b>비계PRO 심볼</b><small>현장을 연결하는 전문 플랫폼</small></div><div class="assetCard"><img src="assets/bigye_mascot.png" alt="비계PRO 마스코트 비티"><b>마스코트 비티</b><small>비계인과 함께하는 현장 친구</small></div></div>
   <div class="fieldBanner"><div><strong>오늘의 현장, 오늘의 사람을 만나보세요.</strong><span>구인·구직부터 현장사진, 기술정보와 쉬어가는 유머까지 한곳에서.</span></div><a href="#community">커뮤니티 입장</a></div>
  </div>
 </section>
@@ -178,7 +177,7 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
   </div>
   <div class="memberBox">
    <div class="memberTop">
-    <div><h3><span class="brandStars">★</span> 비계PRO <span class="brandStars">★</span> 앱 회원 전용 다운로드</h3><p>사이트 회원가입 후 로그인하면 앱을 받을 수 있습니다.</p></div>
+    <div><h3>비계PRO 앱 회원 전용 다운로드</h3><p>사이트 회원가입 후 로그인하면 앱을 받을 수 있습니다.</p></div>
     <div class="memberActions"><button class="memberBtn gold" id="joinBtn">회원가입</button><button class="memberBtn dark" id="loginBtn">로그인</button><button class="memberBtn gray" id="logoutBtn" style="display:none">로그아웃</button></div>
    </div>
    <div class="memberStatus" id="memberStatus"></div>
@@ -214,7 +213,7 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
 
 <section class="cta" id="band">
  <div class="wrap ctabox">
-  <div><h2><span class="brandStars">★</span> 비계PRO <span class="brandStars">★</span> 전국 인력네트워크</h2><p>앱 · 홈페이지 · BAND를 하나로 연결하는 대한민국 비계인의 네트워크.</p></div>
+  <div><h2>★비계PRO★ 전국 인력네트워크</h2><p>앱 · 홈페이지 · BAND를 하나로 연결하는 대한민국 비계인의 네트워크.</p></div>
   <a class="darkbtn" href="https://band.us/@bliss" target="_blank" rel="noopener">BAND 바로가기</a>
  </div>
 </section>
