@@ -1,0 +1,27 @@
+name: 커뮤니티 게시판 자동 일일 게시
+
+on:
+  schedule:
+    # 매일 21:00 UTC = 06:00 KST(한국시간)
+    - cron: "0 21 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: Node.js 설치
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: firebase-admin 설치
+        run: npm install firebase-admin@12
+
+      - name: 오늘의 비계 기술·안전 / 유머 게시
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: node scripts/post-daily.mjs

@@ -123,6 +123,9 @@ h2{font-size:clamp(30px,3.6vw,46px);letter-spacing:-.03em;margin:10px 0 14px;fon
 .noticeLine{background:var(--black);color:#fff;border-radius:16px;padding:17px 20px;margin-bottom:28px;display:flex;gap:12px;align-items:center;font-size:14px}.noticeLine b{color:var(--gold);white-space:nowrap}
 .quickBoard{background:#fff;border-bottom:1px solid #e6eded}.quickGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;padding:16px 0}.quickLink{background:var(--cream);border:1px solid #dde8e8;border-radius:14px;padding:13px 10px;text-align:center;font-weight:800;color:#284a52;font-size:13.5px;transition:.15s}.quickLink:hover{background:var(--black);color:#fff;transform:translateY(-2px)}.quickLink strong{display:block;color:#c68f00;font-size:10.5px;letter-spacing:.06em;margin-bottom:4px}
 
+.dailyCorner{background:var(--cream);padding:52px 0}.dailyGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.dailyCard{background:#fff;border:1px solid #e1e9e9;border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-sm)}.dailyHead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:13px}.dailyBadge{background:var(--black);color:var(--gold2);border-radius:999px;padding:7px 13px;font-size:12.5px;font-weight:800;white-space:nowrap}.dailyBadge.humorBadge{background:var(--gold);color:var(--black)}.dailyDate{color:#9aa7aa;font-size:12.5px;font-weight:700;white-space:nowrap}.dailyCard h3{font-size:19px;margin:0 0 10px;font-weight:800}.dailyCard p{margin:0;color:#5b6a6e;line-height:1.75;font-size:14.5px;white-space:pre-wrap}
+@media(max-width:820px){.dailyGrid{grid-template-columns:1fr}}
+
 .adminModal{width:min(900px,100%);max-height:92vh;overflow:auto;background:#f5f1e8;color:#171717;border-radius:var(--r-xl);padding:28px;position:relative}.adminModal h3{font-size:25px;margin:0 0 5px;font-weight:800}.adminSub{color:#666;margin:0 0 20px;font-size:14px}.adminStats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}.adminStat{background:#17191d;color:#fff;border-radius:15px;padding:16px}.adminStat b{display:block;color:var(--gold);font-size:23px}.adminTools{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:16px}.adminList{display:grid;gap:9px}.adminRow{background:#fff;border:1px solid #ddd7ca;border-radius:14px;padding:15px;display:flex;justify-content:space-between;align-items:center;gap:15px}.adminRowMain{min-width:0}.adminRowMain b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}.adminRowMain small{color:#777}.adminDelete{border:0;background:#b8322a;color:#fff;border-radius:9px;padding:9px 12px;font-weight:800;cursor:pointer;white-space:nowrap;font-size:13px}
 
 .brandShowcase{background:var(--black);padding:66px 0}.brandShowGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.brandAd{position:relative;overflow:hidden;min-height:340px;border:1px solid var(--line);border-radius:var(--r-xl);background:linear-gradient(150deg,#1b4550,#0e1f26 75%);padding:38px;display:flex;flex-direction:column;justify-content:flex-end}.brandAd:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;border:1px solid rgba(231,172,44,.22);right:-70px;top:-70px}.brandAd>*{position:relative;z-index:2}.brandAdLockup{margin-bottom:22px}.brandAdLockup .lockupSymbol{height:40px}.brandAdLockup .lockupWordmark{height:24px}.brandAd h2{font-size:34px;margin:0 0 10px;color:#fff}.brandAd p{color:#c7d4d6;line-height:1.7;margin:0;max-width:580px;font-size:15px}
@@ -176,6 +179,21 @@ footer{padding:36px 0;color:#93a4a8;border-top:1px solid #21393f;background:#0a1
 </header>
 
 <div class="quickBoard" aria-label="빠른 메뉴"><div class="wrap quickGrid"><a class="quickLink" href="#community" data-go-category="현장소식"><strong>NEW</strong>현장소식</a><a class="quickLink" href="#community" data-go-category="구인"><strong>JOBS</strong>구인정보</a><a class="quickLink" href="#community" data-go-category="구직"><strong>PEOPLE</strong>구직정보</a><a class="quickLink" href="#community" data-go-category="비계기술"><strong>SKILL</strong>비계기술</a><a class="quickLink" href="#community" data-go-category="현장사진"><strong>PHOTO</strong>현장사진</a><a class="quickLink" href="#community" data-go-category="유머"><strong>REST</strong>유머·수다</a></div></div>
+
+<section class="dailyCorner" aria-label="오늘의 비계 기술·안전과 유머">
+ <div class="wrap dailyGrid">
+  <div class="dailyCard">
+   <div class="dailyHead"><span class="dailyBadge">오늘의 비계 기술·안전</span><span class="dailyDate" id="techDate"></span></div>
+   <h3 id="techTitle"></h3>
+   <p id="techBody"></p>
+  </div>
+  <div class="dailyCard">
+   <div class="dailyHead"><span class="dailyBadge humorBadge">오늘의 유머 한 마당</span><span class="dailyDate" id="humorDate"></span></div>
+   <h3 id="humorTitle"></h3>
+   <p id="humorBody"></p>
+  </div>
+ </div>
+</section>
 
 <section class="brandShowcase" aria-label="비계PRO 소개">
  <div class="wrap brandShowGrid">
@@ -296,6 +314,88 @@ footer{padding:36px 0;color:#93a4a8;border-top:1px solid #21393f;background:#0a1
   <div class="authSwitch"><span id="switchText">이미 회원이신가요?</span> <button id="switchMode">로그인</button></div>
  </div>
 </div>
+<script>
+(function(){
+ var SCAFFOLD_TIPS_FALLBACK=[
+  {t:"벽이음, 대충 걸지 마세요",b:"강관비계는 수직 5m, 수평 5m 이내마다 벽이음을 설치해야 흔들림을 잡습니다. 벽이음이 빠지면 비계 전체가 도미노처럼 넘어갈 수 있으니 해체 직전까지 순서대로 남겨두세요."},
+  {t:"시스템비계 조립은 순서가 생명",b:"잭베이스로 수평을 먼저 잡고 → 수직재 → 수평재 → 가새 순으로 조립해야 안정적입니다. 순서를 건너뛰면 마지막에 수평이 틀어져 다시 뜯어야 하는 일이 생깁니다."},
+  {t:"안전대 이중 후크, 귀찮아도 두 번",b:"이동 중에는 반드시 한쪽 후크를 먼저 걸고 다른 쪽을 옮기는 '2행정 체결'을 지키세요. 두 후크가 동시에 풀리는 순간이 가장 위험한 순간입니다."},
+  {t:"낙하물방지망, 각도가 핵심",b:"방지망은 수평면과 20도 이상 각도를 주어 설치해야 낙하물이 튕겨 나가지 않고 걸립니다. 처진 방지망은 없느니만 못하니 장력도 꼭 확인하세요."},
+  {t:"작업발판 폭 40cm, 줄자로 재보세요",b:"작업발판은 최소 폭 40cm 이상, 틈은 3cm 이하로 유지해야 합니다. 발판 두 장 사이 틈이 벌어진 채 방치되면 발이 빠지는 사고로 이어집니다."},
+  {t:"비계 기초는 지반부터",b:"비계를 세우기 전 지반을 다지고 깔판이나 깔목을 깔아 하중을 분산시켜야 합니다. 비 온 다음 날은 특히 침하 여부를 다시 점검하세요."},
+  {t:"강풍 기준, 외우면 목숨 지킵니다",b:"순간풍속 10m/s 이상이면 비계의 조립·해체·이동 작업을 중지하고, 15m/s 이상이면 이미 진행 중인 작업도 중지해야 합니다. 오늘 바람이 좀 세다 싶으면 무전으로 꼭 공유하세요."},
+  {t:"승강설비 없는 비계는 미완성",b:"비계에 오르내릴 때는 지정된 사다리나 계단식 승강설비를 이용해야 합니다. 가새를 밟고 오르다 미끄러지는 사고가 매년 반복됩니다."},
+  {t:"적재하중 표지판, 눈에 잘 보이게",b:"비계 구간마다 최대 적재하중을 표지판으로 붙여두면 과적을 막을 수 있습니다. 자재를 한곳에 몰아 쌓지 말고 분산 적재하는 습관을 들이세요."},
+  {t:"턱끈까지 채워야 안전모입니다",b:"안전모를 썼어도 턱끈을 풀어두면 낙하 충격에 벗겨져 버립니다. 특히 고소작업 중에는 턱끈 체결 여부를 서로 확인해주는 문화가 필요합니다."},
+  {t:"이동식비계(우마), 아웃트리거부터",b:"이동식비계는 사용 전 아웃트리거를 펴서 전도를 막고, 바퀴는 반드시 브레이크로 고정한 뒤 올라가야 합니다. 사람을 태운 채로 이동하는 건 절대 금물입니다."},
+  {t:"달비계 로프는 이중으로",b:"달비계 작업 시 주로프 외에 별도의 보조(안전)로프를 반드시 결속해야 합니다. 로프 한 가닥에 모든 걸 맡기지 마세요."},
+  {t:"강관비계 조립 순서 복습",b:"기둥재 세우기 → 띠장 설치 → 장선 설치 → 발판 설치 순서를 지켜야 중간 단계에서도 구조적으로 안정됩니다. 순서를 바꾸면 임시로는 편해도 나중에 재작업이 늘어납니다."},
+  {t:"브라켓비계, 지지점 확인은 필수",b:"브라켓을 걸 때는 모재의 강도와 고정 상태를 반드시 확인한 뒤 걸어야 합니다. 헐거운 브라켓 위에 발판을 놓는 순간 추락 사고로 이어집니다."},
+  {t:"해체는 반드시 역순으로",b:"비계 해체는 조립의 역순, 즉 위에서부터 아래로 진행해야 합니다. 아래쪽 부재부터 빼면 상부 구조가 갑자기 무너질 수 있습니다."},
+  {t:"통로용 계단, 경사 확인하세요",b:"비계 통로용 계단은 경사 기준을 지키고 미끄럼 방지 처리가 된 발판을 사용해야 합니다. 비 오는 날은 계단참에 물기가 없는지 한 번 더 살펴주세요."},
+  {t:"개구부엔 무조건 안전난간",b:"슬래브나 비계의 개구부는 임시라도 안전난간이나 덮개를 설치해야 합니다. '잠깐이니까 괜찮겠지'가 가장 큰 사고 원인입니다."},
+  {t:"비 온 다음 날, 지반부터 확인",b:"비가 온 뒤에는 비계 하부 지반이 침하되지 않았는지 반드시 재점검해야 합니다. 잭베이스가 기울어졌다면 바로 보고하고 재시공하세요."},
+  {t:"밀폐공간, 환기 먼저",b:"탱크나 맨홀 등 밀폐공간에서 작업 전에는 산소농도를 측정하고 충분히 환기한 뒤 들어가야 합니다. 산소결핍 사고는 구조자까지 함께 위험해진다는 걸 기억하세요."},
+  {t:"용접 근처엔 화재감시자",b:"비계 위에서 용접·용단 작업을 할 때는 주변 가연물을 치우고 화재감시자를 배치해야 합니다. 불티는 생각보다 멀리, 오래 튑니다."},
+  {t:"벽이음 방식, 볼트형과 클램프형 구분",b:"구조체 재질에 따라 볼트형 또는 클램프형 벽이음재를 선택해야 하며 임의로 철사나 끈으로 대신하면 안 됩니다. 정식 부재를 쓰는 게 결국 시간을 아끼는 길입니다."},
+  {t:"크레인 작업 시 비계와 이격거리",b:"이동식 크레인으로 자재를 인양할 때는 비계와 충분한 이격거리를 두고 신호수의 지시에 따라야 합니다. 붐대가 비계에 스치는 사고는 순식간에 일어납니다."},
+  {t:"작업 전 TBM, 형식적으로 하지 마세요",b:"관리감독자는 작업 전 툴박스미팅(TBM)에서 그날의 위험요소와 비계 점검 결과를 공유해야 합니다. 5분의 TBM이 하루의 사고를 막습니다."},
+  {t:"부재 부식·변형은 바로 교체",b:"비계 부재에 녹이 심하거나 휘어진 곳이 있으면 강도가 떨어진 것이니 바로 교체해야 합니다. '아직 쓸 만한데'라는 판단이 가장 위험합니다."},
+  {t:"안전난간 높이, 90cm 이상 기억하세요",b:"상부 안전난간대는 바닥에서 90cm 이상, 중간대는 그 사이 적절한 위치에 설치해야 합니다. 발끝막이판(폭목)도 낙하물 방지에 큰 역할을 합니다."},
+  {t:"잭베이스는 눈으로도, 손으로도 확인",b:"시스템비계 잭베이스는 조정 후 너트로 완전히 고정했는지 눈으로 보고 손으로도 흔들어 확인하세요. 헐거운 잭베이스 하나가 전체 비계를 기울게 만듭니다."},
+  {t:"강관동바리와 비계용 강관은 다릅니다",b:"동바리(서포트)용 강관과 비계용 강관은 규격과 용도가 다르므로 섞어 쓰지 않아야 합니다. 현장에서 급하다고 바꿔 쓰면 강도 계산이 틀어집니다."},
+  {t:"고소작업대(스카이) 탑승 전 체크",b:"고소작업대에 오를 때는 안전대를 반드시 체결하고, 아웃트리거와 지반 상태를 먼저 확인해야 합니다. 붐을 최대로 펼 때는 옆바람에 특히 주의하세요."},
+  {t:"야간 작업, 조명부터 확보",b:"야간에 비계 작업을 할 때는 발판과 통로에 충분한 조명을 설치해 그림자에 가려진 턱이나 틈이 안 보이는 일이 없도록 해야 합니다."},
+  {t:"신입에게는 눈으로 한 번 더 가르쳐주세요",b:"말로 설명하는 것보다 함께 체결하고 함께 점검하며 보여주는 게 훨씬 오래 남습니다. 오늘 옆에 신입이 있다면 안전대 체결법 한 번 더 봐주세요."}
+ ];
+ var HUMOR_ITEMS_FALLBACK=[
+  {t:"짜장면이 화났을 때",b:"짜장면이 화가 나면? 짜증면이 됩니다. 오늘 점심 메뉴 정하다가 싸우지 마시고 그냥 짜장면 드세요."},
+  {t:"번개가 좋아하는 과일",b:"번개가 제일 좋아하는 과일은 천둥…이 아니라 사실 정답은 없습니다. 그래도 웃으셨다면 성공입니다."},
+  {t:"[콩트] 커피 내기",b:"A: '오늘 커피는 가위바위보로 정하자.' B: '콜.' (A는 바위, B는 보) B: '내가 이겼다!' A: '어… 나 방금 낸 거 주먹밥이었는데.' 결국 둘 다 커피 사러 갔다는 훈훈한 결말."},
+  {t:"세상에서 제일 슬픈 나무",b:"세상에서 제일 슬픈 나무는? 눈물나무. 그럼 제일 억울한 나무는 어쩔수없나무."},
+  {t:"고구마가 웃으면?",b:"고구마가 웃으면 '군고구마'가 됩니다. 겨울엔 다들 한번쯤 웃는 고구마 만나보셨죠."},
+  {t:"[콩트] 알람 전쟁",b:"알람: '삐삐삐!' 나: '5분만…' 알람: '삐삐삐!' 나: '10분만…' 알람: (고요) 나: '뭐야 왜 조용해' → 이미 지각 확정."},
+  {t:"북극곰이 싫어하는 숫자",b:"북극곰이 제일 싫어하는 숫자는? 0도. 너무 따뜻해서 얼음이 녹거든요."},
+  {t:"돈가스의 자기소개",b:"돈가스: '저는 튀김옷을 입은 자신감입니다.' 이 말을 들은 김치는 옆에서 조용히 '숙성된 자신감'이라고 속삭였답니다."},
+  {t:"[콩트] 다이어트 결심",b:"나: '오늘부터 다이어트다.' 친구: '치킨 시킬까?' 나: '어 좋아.' 친구: '다이어트는?' 나: '내일부터가 진짜 오늘이야.'"},
+  {t:"야채가 가장 무서워하는 것",b:"야채들이 가장 무서워하는 건? 무서워(무+서워). 특히 무가 제일 떤다고 하네요."},
+  {t:"[콩트] 택배 아저씨와 강아지",b:"택배기사: '계세요~?' 강아지: '멍멍!!!' 택배기사: (문 앞에 놓으며) '사장님, 아드님이 아주 성실하게 근무 중이시네요.'"},
+  {t:"물고기가 다니는 학교",b:"물고기들이 다니는 학교는 어디일까요? 정답은 그냥 '학교 앞바다'입니다. 죄송합니다."},
+  {t:"[콩트] 회식 자리",b:"부장님: '오늘은 내가 쏜다!' 직원들: '와아!!' 부장님: '2차는 각자.' 직원들: '……' 그래도 1차는 맛있었다는 훈훈한 결말."},
+  {t:"계란이 여행 가면?",b:"계란이 여행을 가면 삶은 계란이 됩니다. 이유는 몰라도 여행지에서 다들 한 번씩 삶아지시죠."},
+  {t:"[콩트] 엘리베이터에서",b:"나: (문 닫히기 직전 뛰어오며) '잠깐만요!!' 안에 있던 사람: (열림 버튼 대신 닫힘 버튼을 누른다) 나: '……' 세상은 가끔 이렇게 냉정합니다."},
+  {t:"가장 정직한 빵",b:"세상에서 가장 정직한 빵은? 바로 단팥빵. 왜냐면 겉과 속이 다르지 않거든요, 항상 달아요."},
+  {t:"[콩트] 주차 실력",b:"아내: '주차 좀 똑바로 해봐.' 남편: (30분째 전진 후진 중) 아내: '그냥 세워, 여기 시골이야 아무도 안 봐.' 남편: '내가 나를 보잖아.'"},
+  {t:"가장 게으른 신발",b:"가장 게으른 신발은? 슬리퍼. 신는 것도, 벗는 것도 귀찮아서 대충 신는대요."},
+  {t:"[콩트] 다이어트 광고",b:"TV 광고: '이 제품 하나면 한 달에 5kg!' 나: (팝콘 먹으며) '오 신기하다.' 옆 사람: '너도 하나 사.' 나: '팝콘 다 먹고.'"},
+  {t:"제일 억울한 옷",b:"제일 억울한 옷은? 와이셔츠. 분명 남방인데 자꾸 '와이'냐고 물어봐서요."},
+  {t:"[콩트] 첫 출근",b:"신입: '저 오늘부터 출근합니다!' 선배: '오 반가워요, 커피 한잔?' 신입: '네!' 선배: '그럼 8명 것 좀 부탁해요.' 신입: '…네.' (웃으면서도 다 탔다는 전설)"},
+  {t:"가장 억울한 채소",b:"가장 억울한 채소는 오이입니다. 이름 때문에 자꾸 '오이(왜)'냐는 질문을 받거든요."},
+  {t:"[콩트] 은행 창구",b:"손님: '이자가 왜 이렇게 적어요?' 직원: '고객님, 그건 이자가 아니라 배송비입니다.' 손님: '……' 창구 안팎으로 정적이 흘렀습니다."},
+  {t:"가을에만 우는 열매",b:"가을에만 우는 열매는? 홍시(홍씨). 이유는 없지만 어감이 슬프잖아요."},
+  {t:"[콩트] 헬스장 다짐",b:"나: '오늘부터 3일에 한 번 헬스장 간다.' 친구: '그거 좋다.' 나: (한 달 뒤) '나 3일 동안 한 번도 안 갔어.' 친구: '그것도 3일에 한 번이네.'"},
+  {t:"가장 무거운 과자",b:"가장 무거운 과자는? 다름아닌 '진지한 새우깡'입니다. 이유는 묻지 마세요."},
+  {t:"[콩트] 배달 앱",b:"나: (배달앱 30분째 고민 중) 룸메이트: '아직도 안 시켰어?' 나: '메뉴 정하는 것도 노동이야.' 룸메이트: '그럼 내가 시킬게.' 나: '어 잠깐만 그건 안돼.'"},
+  {t:"여름이 가장 억울해하는 계절",b:"여름이 가장 억울해하는 계절은 없습니다. 본인이 제일 덥다는 걸 인정하거든요. 쿨하죠."},
+  {t:"[콩트] 세차의 법칙",b:"나: (세차 완료) 하늘: (먹구름 소환) 나: '……' 세차와 비는 떼려야 뗄 수 없는 사이라는 전설이 오늘도 증명되었습니다."},
+  {t:"제일 소심한 숫자",b:"제일 소심한 숫자는 0입니다. 뭘 더해도, 곱해도 자기 존재를 지우거나 그대로 두거든요. 그래도 없으면 안 되는 든든한 숫자죠."}
+ ];
+ // 하루 경계는 한국 표준시(KST, UTC+9) 기준으로 고정합니다.
+ // scripts/post-daily.mjs(커뮤니티 자동 게시 봇)도 같은 방식으로 날짜를 계산해
+ // 홈 화면의 "오늘의 코너"와 커뮤니티 게시판 글이 항상 같은 항목을 가리키게 합니다.
+ function kstNow(){return new Date(Date.now()+9*60*60*1000);}
+ function dayOfYearKST(d){var start=Date.UTC(d.getUTCFullYear(),0,0);return Math.floor((d.getTime()-start)/86400000);}
+ function formatKstDate(d){return d.getUTCFullYear()+"."+(d.getUTCMonth()+1)+"."+d.getUTCDate();}
+ function set(id,text){var el=document.getElementById(id);if(el)el.textContent=text;}
+ function render(tips,jokes){
+  var kst=kstNow(),idx=dayOfYearKST(kst);
+  var tip=tips[idx%tips.length],joke=jokes[idx%jokes.length];
+  set("techDate",formatKstDate(kst));set("techTitle",tip.t);set("techBody",tip.b);
+  set("humorDate",formatKstDate(kst));set("humorTitle",joke.t);set("humorBody",joke.b);
+ }
+ fetch("assets/daily-content.json").then(function(r){if(!r.ok)throw new Error("bad response");return r.json();}).then(function(data){render(data.tips||SCAFFOLD_TIPS_FALLBACK,data.jokes||HUMOR_ITEMS_FALLBACK);}).catch(function(){render(SCAFFOLD_TIPS_FALLBACK,HUMOR_ITEMS_FALLBACK);});
+})();
+</script>
 <script type="module">
  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
  import { getAuth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, signOut, GoogleAuthProvider, OAuthProvider } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
