@@ -7,128 +7,161 @@
 <meta name="description" content="비계PRO 전국 인력네트워크 - 반도체·플랜트·시스템비계·유도원·신호수 구인구직과 현장정보를 연결합니다.">
 <style>
 :root{
-  --black:#10242c;--panel:#17323c;--panel2:#23444e;
-  --gold:#edb52b;--gold2:#ffd66b;--white:#f8faf9;
-  --muted:#8ea0a5;--line:#31515b;--cream:#edf3f3;--blue:#1c6673;
+  --black:#0e1f26;--panel:#15303a;--panel2:#1e3d47;
+  --gold:#e7ac2c;--gold2:#ffd66b;--white:#f9fbfa;
+  --muted:#93a6ab;--line:#2b4c56;--cream:#eef3f2;--blue:#1c6673;
+  --ink:#12191d;--sub:#5b6a6e;
+  --r-sm:10px;--r-md:16px;--r-lg:22px;--r-xl:28px;
+  --shadow-sm:0 4px 14px rgba(14,31,38,.08);
+  --shadow-md:0 14px 34px rgba(14,31,38,.10);
+  --shadow-lg:0 24px 60px rgba(14,31,38,.16);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Pretendard,"Noto Sans KR",Arial,sans-serif;background:#edf3f3;color:#172126}
+body{margin:0;font-family:Pretendard,"Noto Sans KR",Arial,sans-serif;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;word-break:keep-all}
 a{text-decoration:none;color:inherit}
-.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
-nav{position:sticky;top:0;z-index:20;background:rgba(16,36,44,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 8px 26px rgba(16,36,44,.12)}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;font-weight:900;font-size:22px}.brandLockup{width:285px;height:72px;object-fit:contain;background:#fff;border-radius:14px;padding:8px 14px;box-shadow:0 5px 18px rgba(0,0,0,.18)}.heroOfficialWordmark{width:330px;height:auto;display:block}.showcaseOfficialLockup{width:min(590px,92%);height:auto;display:block;background:#fff;border-radius:16px;padding:16px 20px;margin-bottom:24px;box-shadow:0 10px 26px rgba(0,0,0,.2)}
-.mark{width:42px;height:42px;border:2px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-weight:1000}
-.brand b{color:var(--gold)}
-.brandStars{color:#f4bd2f;font-weight:1000;text-shadow:0 1px 2px rgba(0,0,0,.28)}
-.menu{display:flex;gap:26px;color:#d7d7d7;font-size:14px}
-.navbtn{padding:11px 16px;background:var(--gold);color:#13232a;border-radius:10px;font-weight:900}
-.hero{min-height:600px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(130deg,#f8faf9 0%,#edf4f4 58%,#dce9e9 100%);color:#172126;border-bottom:10px solid var(--gold)}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.7%,rgba(28,102,115,.05) 50%,transparent 50.3%),linear-gradient(0deg,transparent 49.7%,rgba(28,102,115,.05) 50%,transparent 50.3%);background-size:120px 120px}
-.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:repeating-linear-gradient(135deg,#111 0 16px,var(--gold) 16px 32px)}
-.heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center;position:relative;z-index:2}
-.kicker{display:inline-block;color:#164f5a;background:#dcebed;border:1px solid #c5dcdf;border-radius:999px;padding:8px 12px;font-size:14px;font-weight:900;letter-spacing:.02em;margin-bottom:18px}
-h1{font-size:clamp(44px,6vw,78px);line-height:1.08;margin:0 0 24px;letter-spacing:-.055em}
+button{font-family:inherit}
+.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(14,31,38,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center}
+.lockup{display:flex;align-items:center;gap:9px}
+.lockup img{display:block;width:auto;object-fit:contain}
+.lockup .lockupSymbol{height:32px}
+.lockup .lockupWordmark{height:19px}
+.menu{display:flex;gap:30px;color:#c9d3d5;font-size:14.5px;font-weight:600}
+.menu a{opacity:.88;transition:.15s}.menu a:hover{opacity:1;color:var(--gold2)}
+.navRight{display:flex;gap:10px;align-items:center}
+.navbtn{padding:11px 18px;background:var(--gold);color:var(--black);border-radius:999px;font-weight:800;font-size:14px}
+.adminBtn{display:none;border:1px solid var(--gold);background:transparent;color:var(--gold);border-radius:999px;padding:9px 15px;font-weight:800;font-size:13px;cursor:pointer}.adminBtn.show{display:inline-block}
+
+.hero{min-height:600px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(150deg,#f9fbfa 0%,#eef4f4 55%,#e2edec 100%);color:var(--ink)}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center;position:relative;z-index:2}
+.kicker{display:inline-flex;align-items:center;gap:7px;color:#155966;background:#e1eeee;border:1px solid #cfe1e1;border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:800;margin-bottom:20px}
+.kicker:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{font-size:clamp(40px,5.4vw,68px);line-height:1.12;margin:0 0 22px;letter-spacing:-.04em;font-weight:800}
 h1 em{font-style:normal;color:#176574}
-.lead{font-size:20px;line-height:1.75;color:#585858;max-width:680px;margin:0}
-.chips{display:flex;flex-wrap:wrap;gap:9px;margin:26px 0 34px}
-.chip{border:1px solid #d7cdbd;background:#fff;padding:9px 13px;border-radius:999px;color:#333;font-size:13px}
+.lead{font-size:18.5px;line-height:1.75;color:#586366;max-width:640px;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 32px}
+.chip{border:1px solid #dbe4e3;background:#fff;padding:8px 14px;border-radius:999px;color:#3c4749;font-size:13px;font-weight:600}
 .actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn{padding:15px 22px;border-radius:12px;font-weight:900;border:1px solid var(--line)}
-.btn.primary{background:var(--gold);color:#12242b;border-color:var(--gold);box-shadow:0 10px 24px rgba(237,181,43,.2)}
-.btn.ghost{background:#16313a;color:#fff}
-.heroCard{background:rgba(255,255,255,.9);border:1px solid #cddedf;border-radius:28px;padding:24px;box-shadow:0 28px 70px rgba(20,73,83,.16)}
-.heroLogo{position:relative;border:1px solid #c9d9dc;border-radius:22px;padding:0;text-align:center;background:#10242c;overflow:hidden}
-.heroBrandImage{width:100%;height:300px;object-fit:cover;border-radius:20px;display:block}.heroLogo:after{content:"일 끝나고, 우리끼리 편하게";position:absolute;left:16px;bottom:16px;background:rgba(16,36,44,.88);color:#fff;border-left:5px solid var(--gold);border-radius:8px;padding:11px 14px;font-weight:900;font-size:14px}
-.heroMascot{position:absolute!important;right:-12px;bottom:-22px;width:126px;z-index:5!important;filter:drop-shadow(0 10px 13px rgba(0,0,0,.22))}.heroSymbol{position:absolute!important;right:16px;top:16px;width:82px;height:82px;object-fit:contain;background:#fff;border-radius:17px;padding:9px;z-index:5!important;box-shadow:0 8px 25px rgba(0,0,0,.18)}
-.heroIdentity{display:flex;align-items:center;gap:18px;margin-bottom:22px}.heroIdentity .identityLine{height:48px;width:2px;background:#9bbdc2}.heroIdentity b{color:#155967;font-size:16px;line-height:1.5}
-.heroLogo .symbol{font-size:54px;color:var(--gold);font-weight:1000}
-.heroLogo .word{font-size:36px;font-weight:1000;letter-spacing:-.05em;margin-top:8px}.heroLogo .word span{color:var(--gold)}
+.btn{padding:15px 24px;border-radius:12px;font-weight:800;font-size:15px;border:1px solid transparent;transition:.15s}
+.btn.primary{background:var(--gold);color:var(--black);box-shadow:0 12px 26px rgba(231,172,44,.28)}.btn.primary:hover{filter:brightness(1.05);transform:translateY(-1px)}
+.btn.ghost{background:var(--black);color:#fff}.btn.ghost:hover{background:#1a343d}
+
+.heroCard{background:#fff;border:1px solid #dbe6e6;border-radius:var(--r-xl);padding:20px;box-shadow:var(--shadow-lg)}
+.heroLogo{position:relative;border-radius:var(--r-lg);overflow:hidden;background:var(--black)}
+.heroBrandImage{width:100%;height:290px;object-fit:cover;display:block;opacity:.92}
+.heroLogo:after{content:"일 끝나고, 우리끼리 편하게";position:absolute;left:14px;bottom:14px;background:rgba(14,31,38,.85);color:#fff;border-left:3px solid var(--gold);border-radius:8px;padding:10px 13px;font-weight:700;font-size:13.5px}
+.heroMascot{position:absolute;right:10px;bottom:10px;width:88px;z-index:5;filter:drop-shadow(0 8px 12px rgba(0,0,0,.28))}
 .statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
-.stat{background:#f4f8f8;border:1px solid #d5e2e3;border-radius:16px;padding:15px;text-align:center}
-.stat strong{display:block;color:#185e6b;font-size:17px}.stat small{color:#718186}
-section{padding:96px 0}
-.light{background:#f7faf9;color:#172126}
-.eyebrow{color:#176574;font-weight:900;font-size:13px;letter-spacing:.12em}
-h2{font-size:clamp(34px,4vw,52px);letter-spacing:-.045em;margin:10px 0 14px}
-.desc{color:#666;line-height:1.75;font-size:17px;max-width:760px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
-.card{background:#fff;border:1px solid #d7e2e2;border-radius:22px;padding:26px;min-height:210px;box-shadow:0 14px 35px rgba(20,73,83,.06);border-top:4px solid var(--gold)}
-.icon{font-size:30px}.card h3{font-size:22px;margin:16px 0 10px}.card p{color:#6b6b6b;line-height:1.7;margin:0}
-.network{background:linear-gradient(135deg,#10242c,#173843)}
-.networkGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
-.quote{font-size:30px;line-height:1.5;font-weight:900;letter-spacing:-.035em}
+.stat{background:var(--cream);border:1px solid #dde8e8;border-radius:14px;padding:14px;text-align:center}
+.stat strong{display:block;color:#185e6b;font-size:16px}.stat small{color:#7a898c;font-size:12.5px}
+
+section{padding:90px 0}
+.light{background:#f8fbfa;color:var(--ink)}
+.eyebrow{color:#176574;font-weight:800;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase}
+h2{font-size:clamp(30px,3.6vw,46px);letter-spacing:-.03em;margin:10px 0 14px;font-weight:800}
+.desc{color:var(--sub);line-height:1.75;font-size:16.5px;max-width:720px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.card{background:#fff;border:1px solid #e1e9e9;border-radius:var(--r-lg);padding:26px;min-height:190px;box-shadow:var(--shadow-sm)}
+.icon{width:44px;height:44px;border-radius:12px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:20px;color:#176574;font-weight:800}
+.card h3{font-size:20px;margin:16px 0 8px;font-weight:800}.card p{color:#68767a;line-height:1.7;margin:0;font-size:14.5px}
+
+.network{background:linear-gradient(150deg,#0e1f26,#173843)}
+.networkGrid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+.quote{font-size:28px;line-height:1.5;font-weight:800;letter-spacing:-.03em;color:#fff}
 .quote span{color:var(--gold)}
-.network p{color:#b4b7bd;line-height:1.8}
-.flow{display:grid;gap:12px}
-.flowItem{display:flex;align-items:center;gap:18px;background:#15181d;border:1px solid #30343c;border-radius:18px;padding:20px}
-.num{width:44px;height:44px;flex:0 0 44px;border-radius:12px;background:var(--gold);color:#111;display:grid;place-items:center;font-weight:1000}
-.flowItem b{display:block;font-size:18px;margin-bottom:4px}.flowItem small{color:var(--muted)}
-.jobs{background:#edf3f3;color:#172126}
-.jobbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
-.jobbar span{padding:10px 14px;border-radius:10px;background:#fff;border:1px solid #ddd8cc;font-weight:700}
-.cta{padding:70px 0;background:linear-gradient(135deg,#10242c 0%,#173842 58%,#10242c 100%);color:#fff;border-top:1px solid #31515b;border-bottom:1px solid #31515b}
+.network p{color:#aeb9bc;line-height:1.8;font-size:15px}
+.flow{display:grid;gap:10px}
+.flowItem{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:18px}
+.num{width:38px;height:38px;flex:0 0 38px;border-radius:10px;background:var(--gold);color:#111;display:grid;place-items:center;font-weight:800;font-size:14px}
+.flowItem b{display:block;font-size:16px;margin-bottom:3px;color:#fff}.flowItem small{color:var(--muted);font-size:13px}
+
+.jobs{background:var(--cream);color:var(--ink)}
+.jobbar{display:flex;gap:9px;flex-wrap:wrap;margin-top:26px}
+.jobbar span{padding:10px 15px;border-radius:10px;background:#fff;border:1px solid #dfe6e5;font-weight:700;font-size:13.5px;color:#3c4749}
+
+.cta{padding:64px 0;background:linear-gradient(150deg,#0e1f26 0%,#173842 60%,#0e1f26 100%);color:#fff}
 .ctabox{display:flex;justify-content:space-between;align-items:center;gap:30px}
-.ctabox h2{margin:0;font-size:38px;color:#fff}.ctabox p{margin:10px 0 0;color:#c8d5d8}
-.darkbtn{background:var(--gold);color:#10242c;padding:16px 22px;border-radius:12px;font-weight:1000;white-space:nowrap;box-shadow:0 10px 24px rgba(0,0,0,.22)}
-.memberBox{margin-top:38px;background:#fff;border:1px solid #e5dfd2;border-radius:22px;padding:26px;box-shadow:0 14px 35px rgba(40,30,10,.05)}
+.ctabox h2{margin:0;font-size:32px;color:#fff}.ctabox p{margin:8px 0 0;color:#c1cfd2;font-size:15px}
+.darkbtn{background:var(--gold);color:var(--black);padding:15px 22px;border-radius:12px;font-weight:800;white-space:nowrap;font-size:14.5px}
+
+.memberBox{margin-top:36px;background:#fff;border:1px solid #e6ded0;border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-sm)}
 .memberTop{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
-.memberTop h3{font-size:25px;margin:0 0 7px}.memberTop p{margin:0;color:#666;line-height:1.6}
-.memberActions{display:flex;gap:10px;flex-wrap:wrap}.memberBtn{border:0;border-radius:11px;padding:13px 18px;font-weight:900;cursor:pointer;font-size:15px}
-.memberBtn.gold{background:var(--gold);color:#111}.memberBtn.dark{background:#111;color:#fff}.memberBtn.gray{background:#e8e5df;color:#333}
-.memberStatus{display:none;margin-top:20px;padding:17px;border-radius:14px;background:#f5f1e8;color:#333}.memberStatus.show{display:block}
-.downloadBtn{display:inline-block;margin-top:12px;background:#111;color:#fff;border-radius:11px;padding:14px 20px;font-weight:900}
-.community{background:#edf3f3;color:#172126;padding:78px 0}
+.memberTop h3{font-size:21px;margin:0 0 6px;font-weight:800}.memberTop p{margin:0;color:var(--sub);line-height:1.6;font-size:14.5px}
+.memberActions{display:flex;gap:9px;flex-wrap:wrap}.memberBtn{border:0;border-radius:11px;padding:12px 18px;font-weight:800;cursor:pointer;font-size:14px}
+.memberBtn.gold{background:var(--gold);color:#111}.memberBtn.dark{background:#111;color:#fff}.memberBtn.gray{background:#eceae4;color:#333}
+.memberStatus{display:none;margin-top:18px;padding:16px;border-radius:14px;background:#f5f1e8;color:#333;font-size:14.5px}.memberStatus.show{display:block}
+.downloadBtn{display:inline-block;margin-top:12px;background:#111;color:#fff;border-radius:11px;padding:13px 19px;font-weight:800;font-size:14px}
+
+/* ---- Community board ---- */
+.community{background:#fff;color:var(--ink);padding:74px 0;border-top:1px solid #e6eded;border-bottom:1px solid #e6eded}
 .communityHead{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
-.communityHead h2{margin-bottom:6px}.communityHead p{margin:0;color:#666}
-.writeBtn{border:0;background:#111;color:#fff;border-radius:12px;padding:15px 22px;font-size:16px;font-weight:900;cursor:pointer}
-.tabs{display:flex;gap:8px;overflow:auto;padding:24px 0 16px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
-.tab{flex:0 0 auto;border:1px solid #d8d1c4;background:#fff;border-radius:999px;padding:10px 15px;font-weight:800;cursor:pointer}.tab.active{background:var(--gold);border-color:var(--gold);color:#111}
-.postGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.postCard{background:#fff;border:1px solid #d4e0e1;border-radius:18px;padding:20px;cursor:pointer;transition:.18s;min-height:154px;box-shadow:0 8px 22px rgba(20,73,83,.04)}.postCard:hover{transform:translateY(-3px);border-color:#9dbfc4;box-shadow:0 15px 32px rgba(20,73,83,.11)}
-.postTop{display:flex;justify-content:space-between;gap:12px;align-items:center}.postCat{display:inline-block;background:#dcecee;color:#175763;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:900}.postDate{color:#89989c;font-size:12px}
-.postCard h3{font-size:20px;margin:15px 0 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.postPreview{color:#666;line-height:1.55;height:49px;overflow:hidden;margin:0}.postMeta{margin-top:13px;color:#999;font-size:12px}
-.emptyPosts{grid-column:1/-1;text-align:center;background:#fff;border:1px dashed #d6cec0;border-radius:18px;padding:55px 20px;color:#777}.emptyPosts b{display:block;color:#222;font-size:20px;margin-bottom:8px}
-.postModal{width:min(650px,100%);max-height:90vh;overflow:auto;background:#fff;color:#171717;border-radius:23px;padding:28px;position:relative}.postModal h3{font-size:27px;margin:0 0 18px}
-.formLabel{display:block;font-weight:900;margin:13px 0 6px}.postSelect,.postInput,.postText{width:100%;border:1px solid #d7d2c7;border-radius:10px;padding:13px;font:inherit}.postText{min-height:180px;resize:vertical;line-height:1.6}
-.formActions{display:flex;justify-content:flex-end;gap:9px;margin-top:16px}.cancelBtn,.saveBtn,.deleteBtn{border:0;border-radius:10px;padding:12px 17px;font-weight:900;cursor:pointer}.cancelBtn{background:#ece9e3}.saveBtn{background:var(--gold)}.deleteBtn{background:#b8322a;color:#fff;margin-right:auto}
-.detailCat{display:inline-block;background:#f2e5bd;color:#795500;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:900}.detailTitle{font-size:27px!important;margin:13px 0 8px!important}.detailMeta{color:#888;font-size:13px;border-bottom:1px solid #eee;padding-bottom:15px}.detailBody{white-space:pre-wrap;line-height:1.8;padding:20px 0;min-height:100px}
-.commentArea{border-top:1px solid #eee;padding-top:18px}.commentArea h4{margin:0 0 13px}.commentRow{background:#f6f3ed;border-radius:11px;padding:12px;margin:8px 0}.commentRow b{font-size:13px}.commentRow p{margin:5px 0 0;white-space:pre-wrap;line-height:1.5}.commentWrite{display:flex;gap:8px;margin-top:12px}.commentInput{flex:1;border:1px solid #d7d2c7;border-radius:10px;padding:12px;font:inherit}.commentBtn{border:0;background:#111;color:#fff;border-radius:10px;padding:0 16px;font-weight:900;cursor:pointer}
-.noticeLine{background:#17191d;color:#fff;border-radius:16px;padding:18px 20px;margin-bottom:14px;display:flex;gap:12px;align-items:center}.noticeLine b{color:var(--gold)}
-.quickBoard{background:#fff;border-bottom:1px solid #d7e3e4}.quickGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;padding:18px 0}.quickLink{background:#f4f8f8;border:1px solid #d6e3e4;border-radius:14px;padding:14px 10px;text-align:center;font-weight:900;color:#21444d;transition:.18s}.quickLink:hover{background:#17343e;color:#fff;transform:translateY(-2px)}.quickLink strong{display:block;color:#d29400;font-size:12px;margin-bottom:4px}
-.adminBtn{display:none;border:1px solid var(--gold);background:#111;color:var(--gold);border-radius:10px;padding:10px 14px;font-weight:900;cursor:pointer}.adminBtn.show{display:inline-block}.adminModal{width:min(900px,100%);max-height:92vh;overflow:auto;background:#f5f1e8;color:#171717;border-radius:23px;padding:28px;position:relative}.adminModal h3{font-size:28px;margin:0 0 5px}.adminSub{color:#666;margin:0 0 20px}.adminStats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}.adminStat{background:#17191d;color:#fff;border-radius:15px;padding:17px}.adminStat b{display:block;color:var(--gold);font-size:25px}.adminTools{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:16px}.adminList{display:grid;gap:9px}.adminRow{background:#fff;border:1px solid #ddd7ca;border-radius:14px;padding:15px;display:flex;justify-content:space-between;align-items:center;gap:15px}.adminRowMain{min-width:0}.adminRowMain b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.adminRowMain small{color:#777}.adminDelete{border:0;background:#b8322a;color:#fff;border-radius:9px;padding:9px 12px;font-weight:900;cursor:pointer;white-space:nowrap}
-.brandShowcase{background:#10242c;padding:70px 0}.brandShowGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.brandAd{position:relative;overflow:hidden;min-height:370px;border:1px solid #31515b;border-radius:26px;background:linear-gradient(140deg,#1b4550,#10242c 72%);padding:40px;display:flex;flex-direction:column;justify-content:flex-end}.brandAd:after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;border:1px solid rgba(237,181,43,.28);right:-70px;top:-70px}.brandAd>*{position:relative;z-index:2}.brandAd h2{font-size:40px;margin:0 0 10px;color:#fff}.brandAd p{color:#d4dfe1;line-height:1.7;margin:0;max-width:600px}.brandSide{display:grid;grid-template-columns:1fr 1fr;gap:18px}.assetCard{background:#17313a;border:1px solid #31515b;border-radius:25px;padding:22px;text-align:center;display:flex;flex-direction:column;justify-content:center}.assetCard img{width:100%;max-height:220px;object-fit:contain;filter:drop-shadow(0 8px 12px rgba(0,0,0,.3))}.assetCard b{display:block;color:#f2bf37;font-size:18px;margin-top:10px}.assetCard small{color:#c2d0d2;margin-top:5px}.fieldBanner{grid-column:1/-1;border-radius:24px;background:linear-gradient(105deg,#e5ae25,#f5cf66);color:#10242c;padding:25px 30px;display:flex;justify-content:space-between;align-items:center;gap:18px}.fieldBanner strong{font-size:25px}.fieldBanner span{display:block;margin-top:6px}.fieldBanner a{background:#10242c;color:#fff;padding:14px 18px;border-radius:11px;font-weight:900;white-space:nowrap}
-.postPhoto{width:100%;height:180px;object-fit:cover;border-radius:12px;margin-top:12px}.detailPhoto{width:100%;max-height:480px;object-fit:contain;background:#111;border-radius:14px;margin:15px 0}.photoHelp{font-size:12px;color:#777;margin-top:5px}
-.modalBack{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.72);align-items:center;justify-content:center;padding:18px}.modalBack.open{display:flex}
-.authModal{width:min(440px,100%);background:#fff;color:#151515;border-radius:23px;padding:28px;position:relative}.authModal h3{font-size:27px;margin:0 0 6px}.authModal>p{color:#666;margin:0 0 20px}
-.closeBtn{position:absolute;right:18px;top:15px;border:0;background:transparent;font-size:27px;cursor:pointer}.authInput{width:100%;border:1px solid #d7d2c7;border-radius:10px;padding:14px;margin:6px 0;font-size:16px}
-.authMain{width:100%;margin-top:10px;border:0;border-radius:11px;padding:14px;background:var(--gold);font-size:16px;font-weight:900;cursor:pointer}.authDivider{text-align:center;color:#999;margin:17px 0;font-size:13px}
-.socialBtn{width:100%;border:1px solid #ddd;border-radius:11px;padding:13px;margin:5px 0;background:#fff;font-size:15px;font-weight:800;cursor:pointer}.socialBtn.kakao{background:#fee500;border-color:#fee500;color:#191919}
-.authMsg{min-height:22px;margin-top:10px!important;color:#b02a22!important;font-size:14px}.authSwitch{text-align:center;margin-top:13px;color:#555;font-size:14px}.authSwitch button{border:0;background:none;color:#9b6b00;font-weight:900;cursor:pointer}
-footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091a20}
-.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}
+.communityHead p{margin:0;color:var(--sub);font-size:14.5px}
+.writeBtn{border:0;background:var(--gold);color:var(--black);border-radius:12px;padding:15px 22px;font-size:15px;font-weight:800;cursor:pointer;display:inline-flex;align-items:center;gap:8px;box-shadow:0 10px 22px rgba(231,172,44,.28)}
+.writeBtn:hover{filter:brightness(1.04)}
+.writeHint{color:var(--sub);font-size:13px;margin-top:8px}
+.tabs{display:flex;gap:8px;overflow:auto;padding:26px 0 6px;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:1px solid #dfe6e6;background:#fff;border-radius:999px;padding:9px 16px;font-weight:700;font-size:13.5px;cursor:pointer;color:#455;transition:.15s}
+.tab.active{background:var(--black);border-color:var(--black);color:#fff}
+.postGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}
+.postCard{background:#fff;border:1px solid #e4eaea;border-radius:var(--r-lg);padding:20px;cursor:pointer;transition:.18s;min-height:150px;box-shadow:var(--shadow-sm)}.postCard:hover{transform:translateY(-3px);border-color:#b9d0d2;box-shadow:var(--shadow-md)}
+.postTop{display:flex;justify-content:space-between;gap:12px;align-items:center}.postCat{display:inline-block;background:#e4eff0;color:#175763;border-radius:999px;padding:5px 11px;font-size:11.5px;font-weight:800}.postDate{color:#9aa7aa;font-size:12px}
+.postCard h3{font-size:18.5px;margin:14px 0 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:800}.postPreview{color:#68767a;line-height:1.55;height:47px;overflow:hidden;margin:0;font-size:14px}.postMeta{margin-top:13px;color:#9aa7aa;font-size:12px}
+.emptyPosts{grid-column:1/-1;text-align:center;background:var(--cream);border:1px dashed #cdd9d8;border-radius:var(--r-lg);padding:60px 20px;color:#68767a}.emptyPosts b{display:block;color:var(--ink);font-size:19px;margin-bottom:8px;font-weight:800}
+.writeFab{position:fixed;right:22px;bottom:22px;z-index:40;width:60px;height:60px;border-radius:50%;background:var(--gold);color:var(--black);border:0;font-size:28px;font-weight:800;cursor:pointer;box-shadow:0 14px 30px rgba(14,31,38,.28);display:flex;align-items:center;justify-content:center}
+.writeFab:hover{filter:brightness(1.05)}
+
+.postModal{width:min(650px,100%);max-height:90vh;overflow:auto;background:#fff;color:#171717;border-radius:var(--r-xl);padding:28px;position:relative}.postModal h3{font-size:24px;margin:0 0 18px;font-weight:800}
+.formLabel{display:block;font-weight:800;margin:14px 0 6px;font-size:14px}.postSelect,.postInput,.postText{width:100%;border:1px solid #dcd7cc;border-radius:10px;padding:13px;font:inherit;font-size:14.5px}.postText{min-height:180px;resize:vertical;line-height:1.6}
+.formActions{display:flex;justify-content:flex-end;gap:9px;margin-top:18px}.cancelBtn,.saveBtn,.deleteBtn{border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer;font-size:14px}.cancelBtn{background:#eeece6}.saveBtn{background:var(--gold)}.deleteBtn{background:#b8322a;color:#fff;margin-right:auto}
+.detailCat{display:inline-block;background:#f2e5bd;color:#795500;border-radius:999px;padding:6px 11px;font-size:11.5px;font-weight:800}.detailTitle{font-size:24px!important;margin:13px 0 8px!important;font-weight:800}.detailMeta{color:#8d9a9d;font-size:13px;border-bottom:1px solid #eee;padding-bottom:15px}.detailBody{white-space:pre-wrap;line-height:1.8;padding:20px 0;min-height:100px;font-size:15px}
+.commentArea{border-top:1px solid #eee;padding-top:18px}.commentArea h4{margin:0 0 13px;font-size:15px}.commentRow{background:#f6f3ed;border-radius:11px;padding:12px;margin:8px 0}.commentRow b{font-size:12.5px}.commentRow p{margin:5px 0 0;white-space:pre-wrap;line-height:1.5;font-size:14px}.commentWrite{display:flex;gap:8px;margin-top:12px}.commentInput{flex:1;border:1px solid #dcd7cc;border-radius:10px;padding:12px;font:inherit;font-size:14px}.commentBtn{border:0;background:#111;color:#fff;border-radius:10px;padding:0 16px;font-weight:800;cursor:pointer}
+
+.noticeLine{background:var(--black);color:#fff;border-radius:16px;padding:17px 20px;margin-bottom:28px;display:flex;gap:12px;align-items:center;font-size:14px}.noticeLine b{color:var(--gold);white-space:nowrap}
+.quickBoard{background:#fff;border-bottom:1px solid #e6eded}.quickGrid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;padding:16px 0}.quickLink{background:var(--cream);border:1px solid #dde8e8;border-radius:14px;padding:13px 10px;text-align:center;font-weight:800;color:#284a52;font-size:13.5px;transition:.15s}.quickLink:hover{background:var(--black);color:#fff;transform:translateY(-2px)}.quickLink strong{display:block;color:#c68f00;font-size:10.5px;letter-spacing:.06em;margin-bottom:4px}
+
+.adminModal{width:min(900px,100%);max-height:92vh;overflow:auto;background:#f5f1e8;color:#171717;border-radius:var(--r-xl);padding:28px;position:relative}.adminModal h3{font-size:25px;margin:0 0 5px;font-weight:800}.adminSub{color:#666;margin:0 0 20px;font-size:14px}.adminStats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}.adminStat{background:#17191d;color:#fff;border-radius:15px;padding:16px}.adminStat b{display:block;color:var(--gold);font-size:23px}.adminTools{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:16px}.adminList{display:grid;gap:9px}.adminRow{background:#fff;border:1px solid #ddd7ca;border-radius:14px;padding:15px;display:flex;justify-content:space-between;align-items:center;gap:15px}.adminRowMain{min-width:0}.adminRowMain b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}.adminRowMain small{color:#777}.adminDelete{border:0;background:#b8322a;color:#fff;border-radius:9px;padding:9px 12px;font-weight:800;cursor:pointer;white-space:nowrap;font-size:13px}
+
+.brandShowcase{background:var(--black);padding:66px 0}.brandShowGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.brandAd{position:relative;overflow:hidden;min-height:340px;border:1px solid var(--line);border-radius:var(--r-xl);background:linear-gradient(150deg,#1b4550,#0e1f26 75%);padding:38px;display:flex;flex-direction:column;justify-content:flex-end}.brandAd:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;border:1px solid rgba(231,172,44,.22);right:-70px;top:-70px}.brandAd>*{position:relative;z-index:2}.brandAdLockup{margin-bottom:22px}.brandAdLockup .lockupSymbol{height:40px}.brandAdLockup .lockupWordmark{height:24px}.brandAd h2{font-size:34px;margin:0 0 10px;color:#fff}.brandAd p{color:#c7d4d6;line-height:1.7;margin:0;max-width:580px;font-size:15px}
+.brandSide{display:grid;grid-template-columns:1fr 1fr;gap:16px}.assetCard{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;text-align:center;display:flex;flex-direction:column;justify-content:center}.assetCard img{width:100%;max-height:150px;object-fit:contain}.assetCard b{display:block;color:var(--gold2);font-size:16px;margin-top:12px;font-weight:800}.assetCard small{color:#a9bbbe;margin-top:5px;font-size:12.5px;display:block}
+.fieldBanner{grid-column:1/-1;border-radius:var(--r-xl);background:linear-gradient(105deg,#e5ae25,#f5cf66);color:var(--black);padding:24px 30px;display:flex;justify-content:space-between;align-items:center;gap:18px}.fieldBanner strong{font-size:22px}.fieldBanner span{display:block;margin-top:5px;font-size:14px}.fieldBanner a{background:var(--black);color:#fff;padding:13px 18px;border-radius:11px;font-weight:800;white-space:nowrap;font-size:14px}
+
+.postPhoto{width:100%;height:180px;object-fit:cover;border-radius:12px;margin-top:12px}.detailPhoto{width:100%;max-height:480px;object-fit:contain;background:#111;border-radius:14px;margin:15px 0}.photoHelp{font-size:12px;color:#8d9a9d;margin-top:5px}
+.modalBack{display:none;position:fixed;inset:0;z-index:100;background:rgba(10,20,24,.72);align-items:center;justify-content:center;padding:18px}.modalBack.open{display:flex}
+.authModal{width:min(430px,100%);background:#fff;color:#151515;border-radius:var(--r-xl);padding:28px;position:relative}.authModal h3{font-size:24px;margin:0 0 6px;font-weight:800}.authModal>p{color:#666;margin:0 0 20px;font-size:14.5px}
+.closeBtn{position:absolute;right:18px;top:15px;border:0;background:transparent;font-size:26px;cursor:pointer;color:#888}
+.authInput{width:100%;border:1px solid #dcd7cc;border-radius:10px;padding:14px;margin:6px 0;font-size:15px}
+.authMain{width:100%;margin-top:10px;border:0;border-radius:11px;padding:14px;background:var(--gold);font-size:15px;font-weight:800;cursor:pointer}.authDivider{text-align:center;color:#999;margin:17px 0;font-size:13px}
+.socialBtn{width:100%;border:1px solid #e2e2e2;border-radius:11px;padding:13px;margin:5px 0;background:#fff;font-size:14.5px;font-weight:700;cursor:pointer}.socialBtn.kakao{background:#fee500;border-color:#fee500;color:#191919}
+.authMsg{min-height:22px;margin-top:10px!important;color:#b02a22!important;font-size:13.5px}.authSwitch{text-align:center;margin-top:13px;color:#555;font-size:13.5px}.authSwitch button{border:0;background:none;color:#9b6b00;font-weight:800;cursor:pointer}
+
+footer{padding:36px 0;color:#93a4a8;border-top:1px solid #21393f;background:#0a1a1f}
+.foot{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:13.5px}
+.footBrand{opacity:.9}.footBrand .lockupSymbol{height:22px}.footBrand .lockupWordmark{height:13px}
+
 @media(max-width:820px){
- .menu{display:none}.hero{min-height:auto;padding:80px 0}.heroGrid,.networkGrid{grid-template-columns:1fr}
- .heroCard{margin-top:10px}.cards{grid-template-columns:1fr}.ctabox,.foot{align-items:flex-start;flex-direction:column}
- section{padding:70px 0}.statrow{grid-template-columns:1fr 1fr 1fr}.postGrid{grid-template-columns:1fr}.community{padding:60px 0}.commentWrite{flex-direction:column}.commentBtn{padding:12px}.brandShowGrid{grid-template-columns:1fr}.brandSide{grid-template-columns:1fr 1fr}.brandAd{min-height:310px}.fieldBanner{align-items:flex-start;flex-direction:column}.adminStats{grid-template-columns:1fr}.adminRow{align-items:flex-start}.quickGrid{grid-template-columns:repeat(3,1fr)}
+ .menu{display:none}.hero{min-height:auto;padding:70px 0}.heroGrid,.networkGrid{grid-template-columns:1fr}
+ .heroCard{margin-top:6px}.cards{grid-template-columns:1fr}.ctabox,.foot{align-items:flex-start;flex-direction:column}
+ section{padding:64px 0}.statrow{grid-template-columns:1fr 1fr 1fr}.postGrid{grid-template-columns:1fr}.community{padding:54px 0}.commentWrite{flex-direction:column}.commentBtn{padding:12px}.brandShowGrid{grid-template-columns:1fr}.brandSide{grid-template-columns:1fr 1fr}.brandAd{min-height:290px}.fieldBanner{align-items:flex-start;flex-direction:column}.adminStats{grid-template-columns:1fr}.adminRow{align-items:flex-start}.quickGrid{grid-template-columns:repeat(3,1fr)}
 }
-@media(max-width:520px){.quickGrid{grid-template-columns:repeat(2,1fr)}.heroBrandImage{height:230px}.brandLockup{width:205px;height:57px;padding:6px 10px}.heroIdentity{gap:12px}.heroOfficialWordmark{width:220px}.heroIdentity b{font-size:13px}.showcaseOfficialLockup{width:94%;padding:12px 14px}.brandAd{padding:28px}.brandAd h2{font-size:31px}}
+@media(max-width:520px){.quickGrid{grid-template-columns:repeat(2,1fr)}.heroBrandImage{height:220px}.nav .lockupSymbol{height:26px}.nav .lockupWordmark{height:15px}.brandAd{padding:26px}.brandAd h2{font-size:27px}.writeFab{width:54px;height:54px;font-size:24px;right:16px;bottom:16px}}
 </style>
 </head>
 <body>
 <nav>
   <div class="wrap nav">
-    <a class="brand" href="#"><img class="brandLockup" src="assets/brand_v2/bigye_official_lockup.png" alt="비계PRO 공식 로고"></a>
+    <a class="brand" href="#"><span class="lockup"><img class="lockupSymbol" src="assets/brand_v2/bigye_official_symbol_v2_light.png" alt="비계PRO 심볼"><img class="lockupWordmark" src="assets/brand_v2/bigye_official_wordmark_v2_light.png" alt="비계PRO"></span></a>
     <div class="menu"><a href="#community">커뮤니티</a><a href="#community" data-go-category="구인">구인·구직</a><a href="#app">비계PRO 앱</a><a href="#band">BAND</a></div>
-    <div style="display:flex;gap:8px;align-items:center"><button class="adminBtn" id="adminRoomBtn">관리방</button><a class="navbtn" href="#community">글 보러가기</a></div>
+    <div class="navRight"><button class="adminBtn" id="adminRoomBtn">관리방</button><a class="navbtn" href="#community">글 보러가기</a></div>
   </div>
 </nav>
 
 <header class="hero">
  <div class="wrap heroGrid">
   <div>
-   <div class="heroIdentity"><img class="heroOfficialWordmark" src="assets/brand_v2/bigye_official_wordmark.png" alt="비계PRO 공식 워드마크"><span class="identityLine"></span><b>현장과 사람을 잇는<br>비계 전문 커뮤니티</b></div>
    <div class="kicker">비계인의 현장 사랑방</div>
    <h1>일 끝나고<br><em>잠깐 쉬었다 가요.</em></h1>
    <p class="lead">오늘 현장은 어땠어요? 일자리도 찾고, 기술도 묻고, 힘들었던 이야기도 풀고, 유머 보며 웃어가는 우리들의 공간입니다.</p>
@@ -136,7 +169,7 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
    <div class="actions"><a class="btn primary" href="#community">사랑방 들어가기</a><a class="btn ghost" href="#app">비계PRO 앱 받기</a></div>
   </div>
   <div class="heroCard">
-   <div class="heroLogo"><img class="heroBrandImage" src="assets/site_hero_rest.png" alt="일을 마치고 쉬며 이야기하는 비계공들"><img class="heroSymbol" src="assets/brand_v2/bigye_official_symbol.png" alt="비계PRO 공식 심볼"><img class="heroMascot" src="assets/bigye_mascot.png" alt="비계PRO 마스코트 비티"></div>
+   <div class="heroLogo"><img class="heroBrandImage" src="assets/site_hero_rest.png" alt="일을 마치고 쉬며 이야기하는 비계공들"><img class="heroMascot" src="assets/bigye_mascot_v2.png" alt="비계PRO 마스코트 비티"></div>
    <div class="statrow"><div class="stat"><strong>현장 얘기</strong><small>오늘도 한마디</small></div><div class="stat"><strong>일자리</strong><small>서로 연결</small></div><div class="stat"><strong>쉬는 시간</strong><small>웃고 가요</small></div></div>
   </div>
  </div>
@@ -146,8 +179,8 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
 
 <section class="brandShowcase" aria-label="비계PRO 소개">
  <div class="wrap brandShowGrid">
-  <div class="brandAd"><img class="showcaseOfficialLockup" src="assets/brand_v2/bigye_official_lockup.png" alt="비계PRO 공식 로고"><h2>비계인의 기술과 일자리를 연결합니다.</h2><p>현장에서 쌓은 경험이 기술이 되고, 좋은 사람이 좋은 현장과 만나는 대한민국 비계 전문 커뮤니티.</p></div>
-  <div class="brandSide"><div class="assetCard"><img src="assets/brand_v2/bigye_official_symbol_silver.png" alt="비계PRO 공식 은색 심볼"><b><span class="brandStars">★</span> 비계PRO <span class="brandStars">★</span> 심볼</b><small>현장을 연결하는 전문 플랫폼</small></div><div class="assetCard"><img src="assets/bigye_mascot.png" alt="비계PRO 마스코트 비티"><b>마스코트 비티</b><small>비계인과 함께하는 현장 친구</small></div></div>
+  <div class="brandAd"><span class="lockup brandAdLockup"><img class="lockupSymbol" src="assets/brand_v2/bigye_official_symbol_v2_light.png" alt="비계PRO 심볼"><img class="lockupWordmark" src="assets/brand_v2/bigye_official_wordmark_v2_light.png" alt="비계PRO"></span><h2>비계인의 기술과 일자리를 연결합니다.</h2><p>현장에서 쌓은 경험이 기술이 되고, 좋은 사람이 좋은 현장과 만나는 대한민국 비계 전문 커뮤니티.</p></div>
+  <div class="brandSide"><div class="assetCard"><img src="assets/brand_v2/bigye_official_symbol_v2_light.png" alt="비계PRO 공식 심볼"><b>비계PRO 심볼</b><small>현장을 연결하는 전문 플랫폼</small></div><div class="assetCard"><img src="assets/bigye_mascot_v2.png" alt="비계PRO 마스코트 비티"><b>마스코트 비티</b><small>비계인과 함께하는 현장 친구</small></div></div>
   <div class="fieldBanner"><div><strong>오늘의 현장, 오늘의 사람을 만나보세요.</strong><span>구인·구직부터 현장사진, 기술정보와 쉬어가는 유머까지 한곳에서.</span></div><a href="#community">커뮤니티 입장</a></div>
  </div>
 </section>
@@ -157,7 +190,10 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
   <div class="noticeLine"><b>비계PRO 오늘의 소식</b><span>현장·반도체·플랜트 소식부터 일자리, 기술, 웃고 쉬어가는 유머까지 함께 나누는 공간입니다.</span></div>
   <div class="communityHead">
    <div><div class="eyebrow">BIGYE PEOPLE COMMUNITY</div><h2>비계인들의 살아있는 이야기</h2><p>새로운 현장과 산업 소식을 보고, 회원은 글과 댓글로 서로 소통할 수 있습니다.</p></div>
-   <button class="writeBtn" id="writePostBtn">＋ 글쓰기</button>
+   <div>
+    <button class="writeBtn" id="writePostBtn">＋ 글쓰기</button>
+    <div class="writeHint">로그인한 회원이면 누구나 글을 쓸 수 있어요</div>
+   </div>
   </div>
   <div class="tabs" id="communityTabs">
    <button class="tab active" data-category="전체">전체</button><button class="tab" data-category="현장소식">현장소식</button><button class="tab" data-category="반도체">반도체</button><button class="tab" data-category="플랜트">플랜트</button><button class="tab" data-category="구인">구인</button><button class="tab" data-category="구직">구직</button><button class="tab" data-category="비계기술">비계기술</button><button class="tab" data-category="안전표지">안전표지</button><button class="tab" data-category="현장사진">현장사진</button><button class="tab" data-category="자유수다">자유수다</button><button class="tab" data-category="유머">유머</button>
@@ -165,6 +201,7 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
   <div class="postGrid" id="postGrid"><div class="emptyPosts"><b>게시글을 불러오는 중입니다.</b>잠시만 기다려주세요.</div></div>
  </div>
 </section>
+<button class="writeFab" id="writeFab" title="글쓰기" aria-label="글쓰기">＋</button>
 
 <section class="light" id="app">
  <div class="wrap">
@@ -178,7 +215,7 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
   </div>
   <div class="memberBox">
    <div class="memberTop">
-    <div><h3><span class="brandStars">★</span> 비계PRO <span class="brandStars">★</span> 앱 회원 전용 다운로드</h3><p>사이트 회원가입 후 로그인하면 앱을 받을 수 있습니다.</p></div>
+    <div><h3>비계PRO 앱 회원 전용 다운로드</h3><p>사이트 회원가입 후 로그인하면 앱을 받을 수 있습니다.</p></div>
     <div class="memberActions"><button class="memberBtn gold" id="joinBtn">회원가입</button><button class="memberBtn dark" id="loginBtn">로그인</button><button class="memberBtn gray" id="logoutBtn" style="display:none">로그아웃</button></div>
    </div>
    <div class="memberStatus" id="memberStatus"></div>
@@ -189,7 +226,7 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
 <section class="network" id="network">
  <div class="wrap networkGrid">
   <div>
-   <div class="kicker">★ 비계PRO ★ 전국 인력네트워크</div>
+   <div class="kicker" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);color:#dce7e8">비계PRO 전국 인력네트워크</div>
    <div class="quote">無에서 有를 만드는<br><span>하늘의 목수, 비계공.</span></div>
    <p>아무것도 없는 공간에 가장 먼저 길을 만들고, 우리가 세운 발판 위에서 대한민국의 산업현장이 완성됩니다.</p>
    <p>비계는 단순한 철파이프가 아닙니다. 사람의 생명과 안전을 지키는 현장의 첫 구조물이며, 우리는 그 현장을 지탱하는 전문 기술자입니다.</p>
@@ -205,7 +242,7 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
 
 <section class="jobs" id="jobs">
  <div class="wrap">
-  <div class="eyebrow">JOBS & PEOPLE</div>
+  <div class="eyebrow">JOBS &amp; PEOPLE</div>
   <h2>좋은 현장과<br>좋은 사람을 연결합니다.</h2>
   <p class="desc">지역·공종·단가·기간·숙식·출퇴근 조건을 보기 쉽게 정리해 필요한 인력과 현장이 더 빠르게 만날 수 있도록 합니다.</p>
   <div class="jobbar"><span>평택·고덕 삼성</span><span>기흥 삼성</span><span>탕정 삼성</span><span>이천·청주 하이닉스</span><span>전국 플랜트</span><span>조선소</span><span>시스템비계</span><span>유도원·신호수</span></div>
@@ -214,13 +251,13 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
 
 <section class="cta" id="band">
  <div class="wrap ctabox">
-  <div><h2><span class="brandStars">★</span> 비계PRO <span class="brandStars">★</span> 전국 인력네트워크</h2><p>앱 · 홈페이지 · BAND를 하나로 연결하는 대한민국 비계인의 네트워크.</p></div>
+  <div><h2>비계PRO 전국 인력네트워크</h2><p>앱 · 홈페이지 · BAND를 하나로 연결하는 대한민국 비계인의 네트워크.</p></div>
   <a class="darkbtn" href="https://band.us/@bliss" target="_blank" rel="noopener">BAND 바로가기</a>
  </div>
 </section>
 
 <footer>
- <div class="wrap foot"><div><b style="color:#fff">비계PRO</b> · 비계의 기준, 프로의 가치</div><div>© 2026 BIGYE.KR. All rights reserved.</div></div>
+ <div class="wrap foot"><div style="display:flex;align-items:center;gap:12px"><span class="lockup footBrand"><img class="lockupSymbol" src="assets/brand_v2/bigye_official_symbol_v2_light.png" alt="비계PRO 심볼"><img class="lockupWordmark" src="assets/brand_v2/bigye_official_wordmark_v2_light.png" alt="비계PRO"></span><span>비계의 기준, 프로의 가치</span></div><div>© 2026 BIGYE.KR. All rights reserved.</div></div>
 </footer>
 <div class="modalBack" id="postEditor" aria-hidden="true">
  <div class="postModal">
@@ -282,13 +319,13 @@ footer{padding:38px 0;color:#aebcc0;border-top:1px solid #29444d;background:#091
  const escapeHtml=value=>String(value??"").replace(/[&<>'"]/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[ch]));
  const displayName=user=>user?.displayName||user?.email?.split("@")[0]||"회원";
  const formatDate=stamp=>{const d=stamp?.toDate?.()||new Date();return `${d.getFullYear()}.${d.getMonth()+1}.${d.getDate()}`;};
- function renderPosts(){const posts=activeCategory==="전체"?allPosts:allPosts.filter(p=>p.category===activeCategory);if(!posts.length){$("postGrid").innerHTML=`<div class="emptyPosts"><b>${activeCategory==="전체"?"첫 이야기를 기다리고 있어요.":activeCategory+" 게시판의 첫 글을 남겨주세요."}</b>로그인한 회원이라면 누구나 글을 쓸 수 있습니다.</div>`;return;}$("postGrid").innerHTML=posts.map(p=>`<article class="postCard" data-id="${p.id}"><div class="postTop"><span class="postCat">${escapeHtml(p.category)}</span><span class="postDate">${formatDate(p.createdAt)}</span></div><h3>${escapeHtml(p.title)}</h3><p class="postPreview">${escapeHtml(p.body)}</p><div class="postMeta">${escapeHtml(p.authorName||"회원")} · 댓글로 함께 이야기해요</div></article>`).join("");document.querySelectorAll(".postCard").forEach(card=>card.onclick=()=>openPost(card.dataset.id));}
+ function renderPosts(){const posts=activeCategory==="전체"?allPosts:allPosts.filter(p=>p.category===activeCategory);if(!posts.length){$("postGrid").innerHTML=`<div class="emptyPosts"><b>${activeCategory==="전체"?"첫 이야기를 기다리고 있어요.":activeCategory+" 게시판의 첫 글을 남겨주세요."}</b>위의 <b>＋ 글쓰기</b> 버튼을 눌러 로그인한 회원이라면 누구나 글을 쓸 수 있습니다.</div>`;return;}$("postGrid").innerHTML=posts.map(p=>`<article class="postCard" data-id="${p.id}"><div class="postTop"><span class="postCat">${escapeHtml(p.category)}</span><span class="postDate">${formatDate(p.createdAt)}</span></div><h3>${escapeHtml(p.title)}</h3><p class="postPreview">${escapeHtml(p.body)}</p><div class="postMeta">${escapeHtml(p.authorName||"회원")} · 댓글로 함께 이야기해요</div></article>`).join("");document.querySelectorAll(".postCard").forEach(card=>card.onclick=()=>openPost(card.dataset.id));}
  onSnapshot(query(collection(db,"posts"),orderBy("createdAt","desc")),snap=>{allPosts=snap.docs.map(d=>({id:d.id,...d.data()}));renderPosts();},()=>{$("postGrid").innerHTML='<div class="emptyPosts"><b>게시판 사용 준비가 필요합니다.</b>Firebase Firestore 데이터베이스와 보안 규칙을 확인해주세요.</div>';});
  $("communityTabs").onclick=e=>{const btn=e.target.closest(".tab");if(!btn)return;document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));btn.classList.add("active");activeCategory=btn.dataset.category;renderPosts();};
  document.querySelectorAll("[data-go-category]").forEach(a=>a.onclick=()=>{activeCategory=a.dataset.goCategory;setTimeout(()=>{const t=document.querySelector(`.tab[data-category="${activeCategory}"]`);if(t)t.click();},0);});
  function openEditor(post=null){if(!currentUser){openAuth(false);return;}editingPost=post;$("postEditorTitle").textContent=post?"글 수정":"새 글 작성";$("postCategory").value=post?.category||((activeCategory!=="전체")?activeCategory:"자유수다");$("postTitle").value=post?.title||"";$("postBody").value=post?.body||"";$("postPhoto").value="";$("deletePostBtn").style.display=post?"block":"none";$("savePostBtn").textContent=post?"수정 완료":"게시하기";$("postEditor").classList.add("open");}
  function closeEditor(){$("postEditor").classList.remove("open");editingPost=null;}
- $("writePostBtn").onclick=()=>openEditor();$("closePostEditor").onclick=closeEditor;$("cancelPostBtn").onclick=closeEditor;
+ $("writePostBtn").onclick=()=>openEditor();$("writeFab").onclick=()=>openEditor();$("closePostEditor").onclick=closeEditor;$("cancelPostBtn").onclick=closeEditor;
  $("savePostBtn").onclick=async()=>{const category=$("postCategory").value,title=$("postTitle").value.trim(),body=$("postBody").value.trim(),photo=$("postPhoto").files[0];if(!title||!body){alert("제목과 내용을 모두 입력해주세요.");return;}if(photo&&photo.size>10*1024*1024){alert("사진은 10MB 이하만 올릴 수 있습니다.");return;}if(!currentUser){openAuth(false);return;}$("savePostBtn").disabled=true;$("savePostBtn").textContent="저장 중...";try{let photoUrl=editingPost?.photoUrl||"";if(photo){const safeName=photo.name.replace(/[^a-zA-Z0-9._-]/g,"_");const photoRef=ref(storage,`community/${currentUser.uid}/${Date.now()}_${safeName}`);await uploadBytes(photoRef,photo,{contentType:photo.type});photoUrl=await getDownloadURL(photoRef);}const data={category,title,body,photoUrl,updatedAt:serverTimestamp()};if(editingPost)await updateDoc(doc(db,"posts",editingPost.id),data);else await addDoc(collection(db,"posts"),{...data,authorId:currentUser.uid,authorName:displayName(currentUser),createdAt:serverTimestamp()});closeEditor();}catch(e){alert("글을 저장하지 못했습니다. Firestore와 사진 규칙을 확인해주세요.");}finally{$("savePostBtn").disabled=false;$("savePostBtn").textContent=editingPost?"수정 완료":"게시하기";}};
  $("deletePostBtn").onclick=async()=>{if(!editingPost||!confirm("이 글을 삭제할까요?"))return;try{await deleteDoc(doc(db,"posts",editingPost.id));closeEditor();closeDetail();}catch(e){alert("글을 삭제하지 못했습니다.");}};
  function closeDetail(){$("postDetail").classList.remove("open");if(stopComments){stopComments();stopComments=null;}selectedPost=null;}
