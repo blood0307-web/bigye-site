@@ -316,7 +316,7 @@ footer{padding:36px 0;color:#93a4a8;border-top:1px solid #21393f;background:#0a1
 </div>
 <script>
 (function(){
- var SCAFFOLD_TIPS=[
+ var SCAFFOLD_TIPS_FALLBACK=[
   {t:"벽이음, 대충 걸지 마세요",b:"강관비계는 수직 5m, 수평 5m 이내마다 벽이음을 설치해야 흔들림을 잡습니다. 벽이음이 빠지면 비계 전체가 도미노처럼 넘어갈 수 있으니 해체 직전까지 순서대로 남겨두세요."},
   {t:"시스템비계 조립은 순서가 생명",b:"잭베이스로 수평을 먼저 잡고 → 수직재 → 수평재 → 가새 순으로 조립해야 안정적입니다. 순서를 건너뛰면 마지막에 수평이 틀어져 다시 뜯어야 하는 일이 생깁니다."},
   {t:"안전대 이중 후크, 귀찮아도 두 번",b:"이동 중에는 반드시 한쪽 후크를 먼저 걸고 다른 쪽을 옮기는 '2행정 체결'을 지키세요. 두 후크가 동시에 풀리는 순간이 가장 위험한 순간입니다."},
@@ -348,7 +348,7 @@ footer{padding:36px 0;color:#93a4a8;border-top:1px solid #21393f;background:#0a1
   {t:"야간 작업, 조명부터 확보",b:"야간에 비계 작업을 할 때는 발판과 통로에 충분한 조명을 설치해 그림자에 가려진 턱이나 틈이 안 보이는 일이 없도록 해야 합니다."},
   {t:"신입에게는 눈으로 한 번 더 가르쳐주세요",b:"말로 설명하는 것보다 함께 체결하고 함께 점검하며 보여주는 게 훨씬 오래 남습니다. 오늘 옆에 신입이 있다면 안전대 체결법 한 번 더 봐주세요."}
  ];
- var HUMOR_ITEMS=[
+ var HUMOR_ITEMS_FALLBACK=[
   {t:"짜장면이 화났을 때",b:"짜장면이 화가 나면? 짜증면이 됩니다. 오늘 점심 메뉴 정하다가 싸우지 마시고 그냥 짜장면 드세요."},
   {t:"번개가 좋아하는 과일",b:"번개가 제일 좋아하는 과일은 천둥…이 아니라 사실 정답은 없습니다. 그래도 웃으셨다면 성공입니다."},
   {t:"[콩트] 커피 내기",b:"A: '오늘 커피는 가위바위보로 정하자.' B: '콜.' (A는 바위, B는 보) B: '내가 이겼다!' A: '어… 나 방금 낸 거 주먹밥이었는데.' 결국 둘 다 커피 사러 갔다는 훈훈한 결말."},
@@ -380,15 +380,20 @@ footer{padding:36px 0;color:#93a4a8;border-top:1px solid #21393f;background:#0a1
   {t:"[콩트] 세차의 법칙",b:"나: (세차 완료) 하늘: (먹구름 소환) 나: '……' 세차와 비는 떼려야 뗄 수 없는 사이라는 전설이 오늘도 증명되었습니다."},
   {t:"제일 소심한 숫자",b:"제일 소심한 숫자는 0입니다. 뭘 더해도, 곱해도 자기 존재를 지우거나 그대로 두거든요. 그래도 없으면 안 되는 든든한 숫자죠."}
  ];
- function dayOfYear(d){var start=new Date(d.getFullYear(),0,0);return Math.floor((d-start)/86400000);}
- function formatToday(d){return d.getFullYear()+"."+(d.getMonth()+1)+"."+d.getDate();}
- var today=new Date();
- var idx=dayOfYear(today);
- var tip=SCAFFOLD_TIPS[idx%SCAFFOLD_TIPS.length];
- var joke=HUMOR_ITEMS[idx%HUMOR_ITEMS.length];
+ // 하루 경계는 한국 표준시(KST, UTC+9) 기준으로 고정합니다.
+ // scripts/post-daily.mjs(커뮤니티 자동 게시 봇)도 같은 방식으로 날짜를 계산해
+ // 홈 화면의 "오늘의 코너"와 커뮤니티 게시판 글이 항상 같은 항목을 가리키게 합니다.
+ function kstNow(){return new Date(Date.now()+9*60*60*1000);}
+ function dayOfYearKST(d){var start=Date.UTC(d.getUTCFullYear(),0,0);return Math.floor((d.getTime()-start)/86400000);}
+ function formatKstDate(d){return d.getUTCFullYear()+"."+(d.getUTCMonth()+1)+"."+d.getUTCDate();}
  function set(id,text){var el=document.getElementById(id);if(el)el.textContent=text;}
- set("techDate",formatToday(today));set("techTitle",tip.t);set("techBody",tip.b);
- set("humorDate",formatToday(today));set("humorTitle",joke.t);set("humorBody",joke.b);
+ function render(tips,jokes){
+  var kst=kstNow(),idx=dayOfYearKST(kst);
+  var tip=tips[idx%tips.length],joke=jokes[idx%jokes.length];
+  set("techDate",formatKstDate(kst));set("techTitle",tip.t);set("techBody",tip.b);
+  set("humorDate",formatKstDate(kst));set("humorTitle",joke.t);set("humorBody",joke.b);
+ }
+ fetch("assets/daily-content.json").then(function(r){if(!r.ok)throw new Error("bad response");return r.json();}).then(function(data){render(data.tips||SCAFFOLD_TIPS_FALLBACK,data.jokes||HUMOR_ITEMS_FALLBACK);}).catch(function(){render(SCAFFOLD_TIPS_FALLBACK,HUMOR_ITEMS_FALLBACK);});
 })();
 </script>
 <script type="module">
