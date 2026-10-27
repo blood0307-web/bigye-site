@@ -65,7 +65,7 @@ async function ensureDailyPost(db, { category, botKey, title, body, botDate }) {
     body,
     photoUrl: "",
     authorId: "bigyepro-daily-bot",
-    authorName: "비계PRO 봇",
+    authorName: "비계PRO 김영복",
     botKey,
     botDate,
     createdAt: FieldValue.serverTimestamp(),
