@@ -389,8 +389,9 @@ footer{padding:36px 0;color:#93a4a8;border-top:1px solid #21393f;background:#0a1
   {t:"제일 소심한 숫자",b:"제일 소심한 숫자는 0입니다. 뭘 더해도, 곱해도 자기 존재를 지우거나 그대로 두거든요. 그래도 없으면 안 되는 든든한 숫자죠."}
  ];
  // 하루 경계는 한국 표준시(KST, UTC+9) 기준으로 고정합니다.
- // scripts/post-daily.mjs(커뮤니티 자동 게시 봇)도 같은 방식으로 날짜를 계산해
- // 홈 화면의 "오늘의 코너"와 커뮤니티 게시판 글이 항상 같은 항목을 가리키게 합니다.
+ // 이 카드는 날짜 기반으로 하나를 골라 보여주는 "오늘의 미리보기"이고,
+ // 실제 커뮤니티 게시판에 올라가는 글은 scripts/post-daily.mjs가 목록을
+ // 순서대로(게시된 개수 기준) 돌며 올리므로 매번 정확히 같은 항목은 아닐 수 있습니다.
  function kstNow(){return new Date(Date.now()+9*60*60*1000);}
  function dayOfYearKST(d){var start=Date.UTC(d.getUTCFullYear(),0,0);return Math.floor((d.getTime()-start)/86400000);}
  function formatKstDate(d){return d.getUTCFullYear()+"."+(d.getUTCMonth()+1)+"."+d.getUTCDate();}

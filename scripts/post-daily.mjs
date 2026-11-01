@@ -2,9 +2,12 @@
 // 하루 한 번씩 자동으로 올리는 스크립트입니다.
 //
 // GitHub Actions(.github/workflows/daily-post.yml)에서 매일 실행되며,
-// index.html의 "오늘의 코너"와 동일한 assets/daily-content.json 데이터를
-// 동일한 방식(KST 기준 연중 일수)으로 골라 커뮤니티 게시판(Firestore posts
-// 컬렉션)에 게시합니다.
+// assets/daily-content.json의 팁·유머 목록을 순서대로 하나씩 게시합니다.
+// 다음에 올릴 항목은 "지금까지 올라온 개수(count) % 목록 길이"로 정하므로,
+// 나중에 목록에 항목을 추가해도 이미 올라간 항목을 건너뛰지 않고 이어서
+// 진행되며, 전체를 한 바퀴 돌기 전에는 반복되지 않습니다.
+// (주의: 달의 날짜를 목록 길이로 나눈 나머지로 고르는 방식은 목록 길이가
+// 바뀔 때마다 매핑이 흔들려 반복이 생길 수 있어 이 방식으로 바꿨습니다.)
 //
 // 필요한 환경변수:
 //   FIREBASE_SERVICE_ACCOUNT  Firebase 서비스 계정 키(JSON) 전체 내용
@@ -22,10 +25,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 function kstNow() {
   return new Date(Date.now() + 9 * 60 * 60 * 1000);
-}
-function dayOfYearKST(d) {
-  const start = Date.UTC(d.getUTCFullYear(), 0, 0);
-  return Math.floor((d.getTime() - start) / 86400000);
 }
 function kstDateString(d) {
   const y = d.getUTCFullYear();
@@ -48,9 +47,10 @@ function loadServiceAccount() {
   }
 }
 
-async function ensureDailyPost(db, { category, botKey, title, body, botDate }) {
-  const existing = await db
-    .collection("posts")
+async function ensureDailyPost(db, { category, botKey, items, botDate }) {
+  const postsRef = db.collection("posts");
+
+  const existing = await postsRef
     .where("botKey", "==", botKey)
     .where("botDate", "==", botDate)
     .limit(1)
@@ -59,10 +59,16 @@ async function ensureDailyPost(db, { category, botKey, title, body, botDate }) {
     console.log(`[skip] ${botKey} ${botDate} 게시글이 이미 있습니다.`);
     return;
   }
-  await db.collection("posts").add({
+
+  const countSnap = await postsRef.where("botKey", "==", botKey).count().get();
+  const position = countSnap.data().count;
+  const idx = position % items.length;
+  const item = items[idx];
+
+  await postsRef.add({
     category,
-    title,
-    body,
+    title: item.t,
+    body: item.b,
     photoUrl: "",
     authorId: "bigyepro-daily-bot",
     authorName: "비계PRO 김영복",
@@ -70,7 +76,7 @@ async function ensureDailyPost(db, { category, botKey, title, body, botDate }) {
     botDate,
     createdAt: FieldValue.serverTimestamp(),
   });
-  console.log(`[posted] [${category}] ${title}`);
+  console.log(`[posted] [${category}] (#${position} -> idx ${idx}) ${item.t}`);
 }
 
 async function main() {
@@ -81,24 +87,18 @@ async function main() {
   const dataPath = join(__dirname, "..", "assets", "daily-content.json");
   const { tips, jokes } = JSON.parse(readFileSync(dataPath, "utf-8"));
 
-  const kst = kstNow();
-  const idx = dayOfYearKST(kst);
-  const botDate = kstDateString(kst);
-  const tip = tips[idx % tips.length];
-  const joke = jokes[idx % jokes.length];
+  const botDate = kstDateString(kstNow());
 
   await ensureDailyPost(db, {
     category: "비계기술",
     botKey: "daily-tip",
-    title: tip.t,
-    body: tip.b,
+    items: tips,
     botDate,
   });
   await ensureDailyPost(db, {
     category: "유머",
     botKey: "daily-joke",
-    title: joke.t,
-    body: joke.b,
+    items: jokes,
     botDate,
   });
 }
@@ -107,3 +107,4 @@ main().catch((e) => {
   console.error(e);
   process.exit(1);
 });
+
