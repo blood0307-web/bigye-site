@@ -167,6 +167,45 @@ footer{padding:36px 0;color:#93a4a8;border-top:1px solid #21393f;background:#0a1
  section{padding:64px 0}.statrow{grid-template-columns:1fr 1fr 1fr}.postGrid{grid-template-columns:1fr}.community{padding:54px 0}.commentWrite{flex-direction:column}.commentBtn{padding:12px}.brandShowGrid{grid-template-columns:1fr}.brandSide{grid-template-columns:1fr 1fr}.brandAd{min-height:290px}.fieldBanner{align-items:flex-start;flex-direction:column}.adminStats{grid-template-columns:1fr}.adminRow{align-items:flex-start}.quickGrid{grid-template-columns:repeat(3,1fr)}
 }
 @media(max-width:520px){.quickGrid{grid-template-columns:repeat(2,1fr)}.heroBrandImage{height:220px}.nav .lockupSymbol{height:26px}.nav .lockupWordmark{height:15px}.brandAd{padding:26px}.brandAd h2{font-size:27px}.writeFab{width:54px;height:54px;font-size:24px;right:16px;bottom:16px}}
+
+/* ===== 2026-11-01 꾸미기 ===== */
+.heroX{min-height:640px;background:var(--black);color:#fff;isolation:isolate}
+.heroBg{position:absolute;inset:0;z-index:-2}.heroBg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(1.06);animation:heroZoom 18s ease-in-out infinite alternate}
+.heroX:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(14,31,38,.97) 0%,rgba(14,31,38,.88) 42%,rgba(14,31,38,.45) 75%,rgba(14,31,38,.25) 100%),radial-gradient(600px 300px at 80% 100%,rgba(231,172,44,.22),transparent 70%)}
+.heroX:after{height:6px;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));background-size:200% 100%;animation:goldRun 4s linear infinite}
+.heroX .kicker{background:rgba(231,172,44,.14);border-color:rgba(231,172,44,.45);color:var(--gold2)}
+.heroX h1{color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.35)}.heroX h1 em{color:var(--gold2);background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-size:200% 100%;animation:goldRun 5s linear infinite}
+.heroX .lead{color:#d3dfe1}
+.heroX .chip{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#fff;backdrop-filter:blur(6px);transition:.18s;font-weight:700}.heroX .chip:hover{background:var(--gold);color:var(--black);border-color:var(--gold);transform:translateY(-2px)}
+.heroX .btn.ghost{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3);color:#fff}.heroX .btn.ghost:hover{background:#fff;color:var(--black)}
+.heroX .btn.primary{animation:pulseGold 2.6s ease-in-out infinite}
+.heroStage{position:relative;height:460px;display:flex;align-items:flex-end;justify-content:center}
+.heroBity{position:relative;z-index:3;height:400px;width:auto;filter:drop-shadow(0 0 2px #fff) drop-shadow(0 0 2px #fff) drop-shadow(0 18px 30px rgba(0,0,0,.55));animation:bityFloat 3.4s ease-in-out infinite}
+.heroStage:before{content:"";position:absolute;bottom:10px;left:50%;width:300px;height:300px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,214,107,.42),rgba(231,172,44,.12) 55%,transparent 70%);z-index:1}
+.heroBubble{position:absolute;top:6px;left:2%;z-index:4;background:#fff;color:var(--black);border-radius:18px 18px 18px 4px;padding:13px 17px;font-size:14.5px;line-height:1.45;box-shadow:0 14px 30px rgba(0,0,0,.3);animation:bubblePop 3.4s ease-in-out infinite}.heroBubble b{color:#a77300}
+.heroBadge{position:absolute;z-index:4;display:flex;gap:10px;align-items:center;background:rgba(14,31,38,.82);border:1px solid rgba(231,172,44,.5);backdrop-filter:blur(8px);border-radius:14px;padding:10px 14px;box-shadow:0 12px 26px rgba(0,0,0,.35)}.heroBadge span{font-size:22px}.heroBadge b{display:block;color:var(--gold2);font-size:17px;line-height:1.1}.heroBadge small{color:#b9c8cb;font-size:11.5px}
+.heroBadge.b1{right:0;top:70px;animation:badgeFloat 4s ease-in-out infinite}.heroBadge.b2{left:0;bottom:120px;animation:badgeFloat 4.6s ease-in-out .6s infinite}.heroBadge.b3{right:4%;bottom:30px;animation:badgeFloat 5s ease-in-out 1.2s infinite}
+.heroSpark{position:absolute;inset:0;z-index:0;pointer-events:none}.heroSpark i{position:absolute;bottom:-10px;width:5px;height:5px;border-radius:50%;background:var(--gold2);opacity:.0;animation:spark 7s linear infinite}.heroSpark i:nth-child(1){left:52%}.heroSpark i:nth-child(2){left:60%;animation-delay:1.2s}.heroSpark i:nth-child(3){left:70%;animation-delay:2.4s}.heroSpark i:nth-child(4){left:78%;animation-delay:3.6s}.heroSpark i:nth-child(5){left:86%;animation-delay:4.8s}.heroSpark i:nth-child(6){left:94%;animation-delay:6s}
+.heroDown{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);z-index:3;color:var(--gold2);font-size:30px;line-height:1;animation:downBob 1.8s ease-in-out infinite}
+.quickBoard{background:var(--black);border-bottom:0}.quickLink{background:linear-gradient(160deg,#17333d,#0f242b);border-color:#2b4c56;color:#fff;padding:16px 10px;position:relative;overflow:hidden}.quickLink strong{color:var(--gold2)}.qIcon{display:flex;width:44px;height:44px;margin:0 auto 8px;border-radius:13px;align-items:center;justify-content:center;font-size:22px;background:rgba(231,172,44,.14);border:1px solid rgba(231,172,44,.35);transition:.2s}.quickLink:hover{background:var(--gold);color:var(--black);border-color:var(--gold)}.quickLink:hover strong{color:var(--black)}.quickLink:hover .qIcon{transform:rotate(-8deg) scale(1.12);background:#fff}
+.dailyCorner{background:linear-gradient(180deg,#0e1f26 0,#0e1f26 90px,var(--cream) 90px)}.dailyCard{border-top:4px solid var(--gold)}
+.boardLayout{grid-template-columns:minmax(0,1fr)!important}.boardSide{grid-template-columns:1.2fr 1fr 1fr 1fr;align-items:stretch}
+.sideCard{transition:.18s;border-top:4px solid var(--gold)}.sideCard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}.songCard{border-top-color:var(--gold2);position:relative;overflow:hidden}.songCard:after{content:"♪";position:absolute;right:14px;top:6px;font-size:60px;color:rgba(255,214,107,.18);animation:noteBob 2.4s ease-in-out infinite}
+.postRow .postCat{transition:.15s}.postRow:hover .postCat{background:var(--black);color:var(--gold2)}.postRow:hover{padding-left:20px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
+@keyframes heroZoom{from{transform:scale(1.06)}to{transform:scale(1.14) translateX(-1.5%)}}
+@keyframes goldRun{to{background-position:-200% 0}}
+@keyframes bityFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes bubblePop{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-6px) rotate(1deg)}}
+@keyframes badgeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes spark{0%{transform:translateY(0);opacity:0}10%{opacity:.9}100%{transform:translateY(-640px);opacity:0}}
+@keyframes downBob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+@keyframes pulseGold{0%,100%{box-shadow:0 12px 26px rgba(231,172,44,.28)}50%{box-shadow:0 12px 34px rgba(231,172,44,.6)}}
+@keyframes noteBob{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-8px) rotate(8deg)}}
+@media(max-width:980px){.boardSide{grid-template-columns:1fr 1fr}}
+@media(max-width:820px){.heroX{padding:56px 0 40px}.heroStage{height:330px;margin-top:10px}.heroBity{height:290px}.heroStage:before{width:230px;height:230px}.heroBubble{font-size:13px;padding:10px 13px}.heroBadge{padding:8px 11px}.heroBadge span{font-size:18px}.heroBadge b{font-size:15px}.heroBadge.b1{top:40px}.heroBadge.b2{bottom:90px}.heroX:before{background:linear-gradient(180deg,rgba(14,31,38,.94) 0%,rgba(14,31,38,.86) 55%,rgba(14,31,38,.6) 100%)}.heroDown{display:none}}
+@media(max-width:560px){.boardSide{grid-template-columns:1fr 1fr;gap:10px}.boardSide .songCard{grid-column:1/-1}.sideCard{padding:13px 14px}.sideCard h4{font-size:14px}.sideList li{font-size:12.5px}.boardSide .sideCard:last-child{grid-column:1/-1}.heroBadge.b3{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -178,33 +217,39 @@ footer{padding:36px 0;color:#93a4a8;border-top:1px solid #21393f;background:#0a1
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero heroX">
+ <div class="heroBg" aria-hidden="true"><img src="assets/site_hero_rest.png" alt=""></div>
+ <div class="heroSpark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
  <div class="wrap heroGrid">
-  <div>
+  <div class="heroText reveal">
    <div class="kicker">비계인의 현장 사랑방</div>
    <h1>일 끝나고<br><em>잠깐 쉬었다 가요.</em></h1>
    <p class="lead">오늘 현장은 어땠어요? 일자리도 찾고, 기술도 묻고, 힘들었던 이야기도 풀고, 유머 보며 웃어가는 우리들의 공간입니다.</p>
-   <div class="chips"><span class="chip">오늘의 현장</span><span class="chip">구인·구직</span><span class="chip">비계 기술</span><span class="chip">현장 사진</span><span class="chip">자유수다</span><span class="chip">유머 한판</span></div>
-   <div class="actions"><a class="btn primary" href="#community">사랑방 들어가기</a><a class="btn ghost" href="#app">비계PRO 앱 받기</a></div>
+   <div class="chips"><a class="chip" href="#community" data-go-category="현장소식">🏗️ 오늘의 현장</a><a class="chip" href="#community" data-go-category="구인">💼 구인·구직</a><a class="chip" href="#community" data-go-category="비계기술">🔧 비계 기술</a><a class="chip" href="#community" data-go-category="현장사진">📷 현장 사진</a><a class="chip" href="#community" data-go-category="자유수다">💬 자유수다</a><a class="chip" href="#community" data-go-category="유머">😂 유머 한판</a></div>
+   <div class="actions"><a class="btn primary" href="#community">사랑방 들어가기 →</a><a class="btn ghost" href="#app">비계PRO 앱 받기</a></div>
   </div>
-  <div class="heroCard">
-   <div class="heroLogo"><img class="heroBrandImage" src="assets/site_hero_rest.png" alt="일을 마치고 쉬며 이야기하는 비계공들"><img class="heroMascot" src="assets/bigye_mascot_v2.png" alt="비계PRO 마스코트 비티"></div>
-   <div class="statrow"><div class="stat"><strong>현장 얘기</strong><small>오늘도 한마디</small></div><div class="stat"><strong>일자리</strong><small>서로 연결</small></div><div class="stat"><strong>쉬는 시간</strong><small>웃고 가요</small></div></div>
+  <div class="heroStage reveal">
+   <div class="heroBubble">어서 와요, 형님들!<br><b>오늘도 무사히 내려왔죠?</b></div>
+   <img class="heroBity" src="assets/bigye_mascot_app.png" alt="비계PRO 마스코트 비티">
+   <div class="heroBadge b1"><span>📝</span><div><b id="heroPostCount">-</b><small>함께 쓴 이야기</small></div></div>
+   <div class="heroBadge b2"><span>🆕</span><div><b id="heroTodayCount">-</b><small>오늘 올라온 글</small></div></div>
+   <div class="heroBadge b3"><span>🎵</span><div><b id="heroSong">형님 노래</b><small>매일 한 곡</small></div></div>
   </div>
  </div>
+ <a class="heroDown" href="#community" aria-label="아래로">⌄</a>
 </header>
 
-<div class="quickBoard" aria-label="빠른 메뉴"><div class="wrap quickGrid"><a class="quickLink" href="#community" data-go-category="현장소식"><strong>NEW</strong>현장소식</a><a class="quickLink" href="#community" data-go-category="구인"><strong>JOBS</strong>구인정보</a><a class="quickLink" href="#community" data-go-category="구직"><strong>PEOPLE</strong>구직정보</a><a class="quickLink" href="#community" data-go-category="비계기술"><strong>SKILL</strong>비계기술</a><a class="quickLink" href="#community" data-go-category="현장사진"><strong>PHOTO</strong>현장사진</a><a class="quickLink" href="#community" data-go-category="유머"><strong>REST</strong>유머·수다</a></div></div>
+<div class="quickBoard" aria-label="빠른 메뉴"><div class="wrap quickGrid"><a class="quickLink reveal" href="#community" data-go-category="현장소식"><span class="qIcon">🏗️</span><strong>NEW</strong>현장소식</a><a class="quickLink reveal" href="#community" data-go-category="구인"><span class="qIcon">💼</span><strong>JOBS</strong>구인정보</a><a class="quickLink reveal" href="#community" data-go-category="구직"><span class="qIcon">🙋</span><strong>PEOPLE</strong>구직정보</a><a class="quickLink reveal" href="#community" data-go-category="비계기술"><span class="qIcon">🔧</span><strong>SKILL</strong>비계기술</a><a class="quickLink reveal" href="#community" data-go-category="현장사진"><span class="qIcon">📷</span><strong>PHOTO</strong>현장사진</a><a class="quickLink reveal" href="#community" data-go-category="유머"><span class="qIcon">😂</span><strong>REST</strong>유머·수다</a></div></div>
 
 <section class="dailyCorner" aria-label="오늘의 비계 기술·안전과 유머">
  <div class="wrap dailyGrid">
-  <div class="dailyCard" id="techCard">
+  <div class="dailyCard reveal" id="techCard">
    <div class="dailyHead"><span class="dailyBadge">오늘의 비계 기술·안전</span><span class="dailyDate" id="techDate"></span></div>
    <h3 id="techTitle"></h3>
    <p id="techBody"></p>
    <span class="dailyMore">글 열고 댓글 달기 →</span>
   </div>
-  <div class="dailyCard" id="humorCard">
+  <div class="dailyCard reveal" id="humorCard">
    <div class="dailyHead"><span class="dailyBadge humorBadge">오늘의 유머 한 마당</span><span class="dailyDate" id="humorDate"></span></div>
    <h3 id="humorTitle"></h3>
    <p id="humorBody"></p>
@@ -216,7 +261,7 @@ footer{padding:36px 0;color:#93a4a8;border-top:1px solid #21393f;background:#0a1
 <section class="brandShowcase" aria-label="비계PRO 소개">
  <div class="wrap brandShowGrid">
   <div class="brandAd"><span class="lockup brandAdLockup"><img class="lockupSymbol" src="assets/brand_v2/bigye_official_symbol_v2_light.png" alt="비계PRO 심볼"><img class="lockupWordmark" src="assets/brand_v2/bigye_official_wordmark_v2_light.png" alt="비계PRO"></span><h2>비계인의 기술과 일자리를 연결합니다.</h2><p>현장에서 쌓은 경험이 기술이 되고, 좋은 사람이 좋은 현장과 만나는 대한민국 비계 전문 커뮤니티.</p></div>
-  <div class="brandSide"><div class="assetCard"><img src="assets/brand_v2/bigye_official_symbol_v2_light.png" alt="비계PRO 공식 심볼"><b>비계PRO 심볼</b><small>현장을 연결하는 전문 플랫폼</small></div><div class="assetCard"><img src="assets/bigye_mascot_v2.png" alt="비계PRO 마스코트 비티"><b>마스코트 비티</b><small>비계인과 함께하는 현장 친구</small></div></div>
+  <div class="brandSide"><div class="assetCard"><img src="assets/brand_v2/bigye_official_symbol_v2_light.png" alt="비계PRO 공식 심볼"><b>비계PRO 심볼</b><small>현장을 연결하는 전문 플랫폼</small></div><div class="assetCard"><img src="assets/bigye_mascot_app.png" alt="비계PRO 마스코트 비티"><b>마스코트 비티</b><small>비계인과 함께하는 현장 친구</small></div></div>
   <div class="fieldBanner"><div><strong>오늘의 현장, 오늘의 사람을 만나보세요.</strong><span>구인·구직부터 현장사진, 기술정보와 쉬어가는 유머까지 한곳에서.</span></div><a href="#community">커뮤니티 입장</a></div>
  </div>
 </section>
@@ -235,17 +280,17 @@ footer{padding:36px 0;color:#93a4a8;border-top:1px solid #21393f;background:#0a1
    <button class="tab active" data-category="전체">전체</button><button class="tab" data-category="현장소식">현장소식</button><button class="tab" data-category="반도체">반도체</button><button class="tab" data-category="플랜트">플랜트</button><button class="tab" data-category="구인">구인</button><button class="tab" data-category="구직">구직</button><button class="tab" data-category="비계기술">비계기술</button><button class="tab" data-category="안전표지">안전표지</button><button class="tab" data-category="현장사진">현장사진</button><button class="tab" data-category="자유수다">자유수다</button><button class="tab" data-category="유머">유머</button>
   </div>
   <div class="boardLayout">
-   <div class="boardMain">
-    <div class="boardBar"><span><b id="boardCount">글 0개</b></span><span>제목을 누르면 글이 열려요</span></div>
-    <div class="postGrid" id="postGrid"><div class="emptyPosts"><b>게시글을 불러오는 중입니다.</b>잠시만 기다려주세요.</div></div>
-    <button class="moreBtn" id="morePosts" style="display:none">더 보기</button>
-   </div>
    <aside class="boardSide" aria-label="볼거리">
     <div class="sideCard songCard" id="songCard" style="display:none"><h4>🎵 오늘의 노래</h4><div class="songTitle" id="songTitle"></div><p class="songLine" id="songLine"></p><a class="songBtn" id="songLink" href="#" target="_blank" rel="noopener">▶ 노래 듣기</a><small class="songBy">비계공 형님이 직접 만든 노래 · Bless Khan</small></div>
     <div class="sideCard"><h4>🔥 댓글 많은 글</h4><ol class="sideList" id="hotList"><li class="sideEmpty">불러오는 중...</li></ol></div>
     <div class="sideCard"><h4>💼 최신 구인</h4><ul class="sideList" id="jobList"><li class="sideEmpty">불러오는 중...</li></ul><button class="sideLink" data-go-category="구인">구인 게시판 가기 →</button></div>
     <div class="sideCard"><h4>📷 현장 사진</h4><div class="photoGrid" id="photoGrid"></div><p class="sideEmpty" id="photoEmpty" style="margin:0">아직 사진이 없어요. 첫 현장 사진을 올려주세요!</p><button class="sideLink" data-go-category="현장사진">현장사진 게시판 가기 →</button></div>
    </aside>
+   <div class="boardMain">
+    <div class="boardBar"><span><b id="boardCount">글 0개</b></span><span>제목을 누르면 글이 열려요</span></div>
+    <div class="postGrid" id="postGrid"><div class="emptyPosts"><b>게시글을 불러오는 중입니다.</b>잠시만 기다려주세요.</div></div>
+    <button class="moreBtn" id="morePosts" style="display:none">더 보기</button>
+   </div>
   </div>
  </div>
 </section>
@@ -466,7 +511,7 @@ footer{padding:36px 0;color:#93a4a8;border-top:1px solid #21393f;background:#0a1
  function isNewPost(p){const d=p.createdAt?.toDate?.();return d&&Date.now()-d.getTime()<36*3600e3;}
  function loadCount(id){if(id in cmtCount||cmtPending[id])return;cmtPending[id]=1;getCountFromServer(collection(db,"posts",id,"comments")).then(r=>{cmtCount[id]=r.data().count;document.querySelectorAll(`[data-cmt="${id}"]`).forEach(el=>el.textContent=cmtCount[id]?"💬 "+cmtCount[id]:"");renderHot();}).catch(()=>{cmtCount[id]=0;});}
  function renderHot(){const list=allPosts.slice(0,40).filter(p=>cmtCount[p.id]>0).sort((a,b)=>cmtCount[b.id]-cmtCount[a.id]).slice(0,5);const el=$("hotList");if(!el)return;el.innerHTML=list.length?list.map((p,i)=>`<li data-open="${p.id}"><span class="rk">${i+1}</span><span class="t">${escapeHtml(p.title)}</span><span class="c">💬${cmtCount[p.id]}</span></li>`).join(""):'<li class="sideEmpty">첫 댓글을 남겨주세요!</li>';}
- function renderSide(){const jobs=allPosts.filter(p=>p.category==="구인").slice(0,4);$("jobList").innerHTML=jobs.length?jobs.map(p=>`<li data-open="${p.id}"><span class="t">${escapeHtml(p.title)}</span><span class="c" style="color:#9aa7aa;font-weight:700">${shortDate(p.createdAt)}</span></li>`).join(""):'<li class="sideEmpty">새 구인 글을 기다리고 있어요.</li>';const pics=allPosts.filter(p=>p.photoUrl).slice(0,6);$("photoGrid").innerHTML=pics.map(p=>`<img src="${escapeHtml(p.photoUrl)}" alt="${escapeHtml(p.title)}" loading="lazy" data-open="${p.id}">`).join("");$("photoEmpty").style.display=pics.length?"none":"block";allPosts.slice(0,40).forEach(p=>loadCount(p.id));renderHot();document.querySelectorAll(".tab").forEach(t=>{const c=t.dataset.category,n=c==="전체"?allPosts.length:allPosts.filter(p=>p.category===c).length;let em=t.querySelector("em");if(!em){em=document.createElement("em");t.appendChild(em);}em.textContent=n;});linkDaily();}
+ function renderSide(){const jobs=allPosts.filter(p=>p.category==="구인").slice(0,4);$("jobList").innerHTML=jobs.length?jobs.map(p=>`<li data-open="${p.id}"><span class="t">${escapeHtml(p.title)}</span><span class="c" style="color:#9aa7aa;font-weight:700">${shortDate(p.createdAt)}</span></li>`).join(""):'<li class="sideEmpty">새 구인 글을 기다리고 있어요.</li>';const pics=allPosts.filter(p=>p.photoUrl).slice(0,6);$("photoGrid").innerHTML=pics.map(p=>`<img src="${escapeHtml(p.photoUrl)}" alt="${escapeHtml(p.title)}" loading="lazy" data-open="${p.id}">`).join("");$("photoEmpty").style.display=pics.length?"none":"block";allPosts.slice(0,40).forEach(p=>loadCount(p.id));renderHot();document.querySelectorAll(".tab").forEach(t=>{const c=t.dataset.category,n=c==="전체"?allPosts.length:allPosts.filter(p=>p.category===c).length;let em=t.querySelector("em");if(!em){em=document.createElement("em");t.appendChild(em);}em.textContent=n;});const hp=$("heroPostCount");if(hp){hp.textContent=allPosts.length+"개";const t=new Date().toDateString();$("heroTodayCount").textContent=allPosts.filter(p=>p.createdAt?.toDate?.()?.toDateString()===t).length+"개";}linkDaily();}
  function linkDaily(){[["techCard","techTitle"],["humorCard","humorTitle"]].forEach(([c,t])=>{const card=$(c),title=($(t)?.textContent||"").trim();if(!card||!title)return;const p=allPosts.find(x=>(x.title||"").trim()===title)||allPosts.find(x=>(x.title||"").includes(title)||title.includes((x.title||"").trim()||"\u0000"));card.classList.toggle("clickable",!!p);card.onclick=p?()=>openPost(p.id):null;});}
  document.addEventListener("click",e=>{const o=e.target.closest("[data-open]");if(o)openPost(o.dataset.open);});
  function renderPosts(){const posts=activeCategory==="전체"?allPosts:allPosts.filter(p=>p.category===activeCategory);$("boardCount").textContent=(activeCategory==="전체"?"전체":activeCategory)+" 글 "+posts.length+"개";if(!posts.length){$("morePosts").style.display="none";$("postGrid").innerHTML=`<div class="emptyPosts"><b>${activeCategory==="전체"?"첫 이야기를 기다리고 있어요.":activeCategory+" 게시판의 첫 글을 남겨주세요."}</b>위의 <b>＋ 글쓰기</b> 버튼을 눌러 로그인한 회원이라면 누구나 글을 쓸 수 있습니다.</div>`;return;}const view=posts.slice(0,shownCount);$("postGrid").innerHTML=view.map(p=>`<article class="postRow${isNewPost(p)?" isNew":""}" data-id="${p.id}"><span class="postCat">${escapeHtml(p.category)}</span><span class="rowTitle">${escapeHtml(p.title)}</span>${p.photoUrl?'<span class="rowPic" title="사진">📷</span>':""}<span class="rowCmt" data-cmt="${p.id}">${cmtCount[p.id]?"💬 "+cmtCount[p.id]:""}</span><span class="rowDate">${shortDate(p.createdAt)}</span></article>`).join("");view.forEach(p=>loadCount(p.id));document.querySelectorAll(".postRow").forEach(r=>r.onclick=()=>openPost(r.dataset.id));const left=posts.length-view.length;$("morePosts").style.display=left>0?"block":"none";$("morePosts").textContent=`더 보기 (${left}개 남음)`;}
@@ -553,7 +598,10 @@ footer{padding:36px 0;color:#93a4a8;border-top:1px solid #21393f;background:#0a1
  onAuthStateChanged(auth,user=>{currentUser=user;$("adminRoomBtn").classList.toggle("show",isAdmin());if(user){$("joinBtn").style.display="none";$("loginBtn").style.display="none";$("logoutBtn").style.display="inline-block";$("myInfoBtn").style.display="inline-block";loadMyProfile(user).catch(()=>{});$("memberStatus").className="memberStatus show";$("memberStatus").innerHTML=`<b>${displayName(user)}님, 환영합니다.</b><br>회원 인증이 완료되었습니다.<br><button class="downloadBtn" id="appDownloadBtn" style="border:0;cursor:pointer">비계PRO 앱 다운로드</button>`;$("appDownloadBtn").onclick=downloadApp;}else{$("joinBtn").style.display="inline-block";$("loginBtn").style.display="inline-block";$("logoutBtn").style.display="none";$("myInfoBtn").style.display="none";$("memberStatus").className="memberStatus";$("memberStatus").innerHTML="";}if(selectedPost)$("ownerPostActions").style.display=user?.uid===selectedPost.authorId?"flex":"none";});
 </script>
 <script>
-(function(){fetch("assets/songs.json",{cache:"no-store"}).then(function(r){return r.json();}).then(function(d){var k=new Date(Date.now()+9*3600e3);if(k.getUTCHours()<4)k=new Date(k.getTime()-86400e3);var today=k.toISOString().slice(0,10);var list=(d.songs||[]).filter(function(x){return x.date<=today;}).sort(function(a,b){return a.date<b.date?1:-1;});if(!list.length)return;var s=list[0];document.getElementById("songTitle").textContent="「"+s.title+"」";document.getElementById("songLine").textContent=s.line;document.getElementById("songLink").href=s.url;document.getElementById("songCard").style.display="block";}).catch(function(){});})();
+(function(){fetch("assets/songs.json",{cache:"no-store"}).then(function(r){return r.json();}).then(function(d){var k=new Date(Date.now()+9*3600e3);if(k.getUTCHours()<4)k=new Date(k.getTime()-86400e3);var today=k.toISOString().slice(0,10);var list=(d.songs||[]).filter(function(x){return x.date<=today;}).sort(function(a,b){return a.date<b.date?1:-1;});if(!list.length)return;var s=list[0];document.getElementById("songTitle").textContent="「"+s.title+"」";document.getElementById("songLine").textContent=s.line;document.getElementById("songLink").href=s.url;document.getElementById("songCard").style.display="block";var hs=document.getElementById("heroSong");if(hs)hs.textContent=s.title.length>8?s.title.slice(0,8)+"…":s.title;}).catch(function(){});})();
+</script>
+<script>
+(function(){var els=document.querySelectorAll(".reveal");if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in")});return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.12});els.forEach(function(e,i){e.style.transitionDelay=(i%6)*60+"ms";io.observe(e);});setTimeout(function(){els.forEach(function(e){e.classList.add("in")})},2500);})();
 </script>
 </body>
 </html>
