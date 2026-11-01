@@ -1,0 +1,17 @@
+{
+ "note": "형(Bless Khan)이 만든 노래. 날짜가 오늘이거나 지난 것 중 가장 최근 곡이 사이트에 보임 (새벽 4시 이후). 미래 날짜 곡은 안 보임.",
+ "songs": [
+  {"date":"2026-10-26","title":"열두 층 위의 점심","url":"https://suno.com/s/cJmPIhSGlAGaRVcx","line":"파이프 끝에 걸터앉아 먹는, 세상에서 제일 높은 점심","kind":"근로자"},
+  {"date":"2026-10-27","title":"늦게 피는 꽃도 꽃이다","url":"https://suno.com/song/c94eac4a-ecda-48c0-96a5-ebbdcfaf0049","line":"조금 늦으면 어때, 나는 지금 피는 중이다","kind":"인생"},
+  {"date":"2026-10-28","title":"일당 받는 날","url":"https://suno.com/song/eb67cc66-0ee0-40ea-9bca-ec90adb6fede","line":"파이프 메고 흘린 땀이 꽃이 되는 날","kind":"근로자"},
+  {"date":"2026-10-29","title":"우산 하나 두고 간 사람","url":"https://suno.com/song/11b01b4b-a1ea-4b5e-b0bd-1d44d369372e","line":"접지도 펴지도 못한 우산 하나","kind":"이별"},
+  {"date":"2026-10-30","title":"당신 머리에 내린 눈","url":"https://suno.com/song/a3415bf8-d756-4f2f-8476-ce4abf8a3750","line":"흰머리 뽑지 마, 그대로 예뻐","kind":"사랑"},
+  {"date":"2026-10-31","title":"가슴 뛰는 쪽으로","url":"https://suno.com/song/859dfe98-3ed8-4eed-9bbb-5bfe30d2029f","line":"지금 이 순간이 제일 젊은 날이야","kind":"인생"},
+  {"date":"2026-11-02","title":"안전화 끈을 묶으며","url":"https://suno.com/song/4c2daf72-696e-464e-9c57-881ebf13decf","line":"함바집 국밥 한 그릇, 형님이 건넨 수저로 시작하는 하루","kind":"근로자"},
+  {"date":"2026-11-03","title":"내 속도로 가","url":"https://suno.com/song/05071290-f70e-4a83-bed4-04e7b39bf883","line":"늦게 닿아도 길은 길이야","kind":"인생"},
+  {"date":"2026-11-04","title":"반장님 한 잔","url":"https://suno.com/song/8b59009f-8be4-4963-ab84-536368e45255","line":"오늘도 무사히 내려왔으니, 반장님 한 잔 받으세요","kind":"근로자"},
+  {"date":"2026-11-05","title":"정류장에 두고 온 마음","url":"https://suno.com/song/24ebdbc4-548a-4189-bca4-ccf26858c479","line":"버스는 가도 마음은 남아","kind":"이별"},
+  {"date":"2026-11-06","title":"잘 지내","url":"https://suno.com/song/ed5fc422-2f65-49b0-b24a-0f5a5f31507e","line":"새벽 두 시, 썼다 지운 세 글자","kind":"이별"},
+  {"date":"2026-11-07","title":"Light it up","url":"https://suno.com/song/bd89734c-a68b-422b-b698-988da5737988","line":"걱정은 off, 기분은 on","kind":"인생"}
+ ]
+}
